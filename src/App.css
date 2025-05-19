@@ -1,0 +1,190 @@
+.App {
+  text-align: center;
+  background-color: #faf3e6;
+}
+.mybtn-clr{
+  background-color: #d6d6c2;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+.plainbtn{
+  background-color: #ceb8a6;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.textclr{
+  background-color: #dadaa3;
+  color: black;
+}
+
+.zoom-hover img {
+  transition: transform 0.9s ease;
+}
+
+.zoom-hover:hover img {
+  transform: scale(1.2);
+}
+
+.w-80{
+  width: 70%;
+}
+.plainbtn:hover {
+  color: black;
+  background-color: #d9cbc0;
+  border-color: #ceb8a6;
+}
+.mybtn-clr:hover {
+  color: black;
+  background-color: #d6d6a7;
+  border-color: #d3d389;
+}
+.navColor{
+  background-color: #faf3e6;
+}
+.contentBlock{
+  background-color: #bebeaa;
+}
+.aboutMeContent{
+  background-color: #f3f3d1;
+}
+.footerBlock{
+  background-color: #f3f3d1;
+}
+.plaincontentBlock{
+  background-color: #faf3e6;
+}
+.textColor{
+  color: black;
+  font-family:'Helvetica';
+  font-size: x-large;
+}
+.logo{
+  color: #cdab90;
+  font-family: 'Dancing Script',cursive;
+  font-weight: bold;
+  font-size: xx-large;
+  opacity: 0;
+  animation: fadeInLeft 1.5s ease-out forwards;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+
+}
+
+.defaultmt-5{
+  margin-top: 50%;
+}
+.olivetextColor{
+  color: #8e8e59;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: x-large;
+}
+.plaintext{
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: x-large;
+}
+.abouttextColor{
+  color: black;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.height-10{
+  padding-top: 5px;
+  height: 50px;
+}
+.height-40{
+  height: 650px;
+}
+.height-90{
+  height: 550px;
+}
+.width-90{
+  width: 430px;
+}
+.submitBtn{
+  background-color: #5f790b;
+  color: White;
+  border: none;
+  cursor: pointer;
+}
+.submitBtn:hover {
+  color: White;
+  background-color: #374210;
+  border-color: #374210;
+}
+.Mycard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #faf3e6;
+  background-clip: border-box;
+}
+.Mycard-footer,
+.Mycard-header {
+  padding: 0.75rem 1rem; /* 12px top/bottom, 16px sides */
+  background-color: #faf3e6;
+}
+.Mycard-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem; /* 16px */
+}
+.Mycard-text {
+  margin-top: 0;
+  margin-bottom: 1rem; /* 16px */
+}
+.nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.nav-link:hover {
+  background-color: white; /* light blue */
+  color: black; /* Bootstrap primary */
+}
+.navbar .nav-link {
+  text-decoration: none !important;
+}
+.nav-link.myactive-link {
+  font-weight:bolder;
+  color: black;
+  border-bottom: 4px solid black;
+}
+.craft-heading {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 2.2rem;
+  color: #3c2f2f; /* Deep earthy tone */
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  animation: fadeInUp 1.5s ease both;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
