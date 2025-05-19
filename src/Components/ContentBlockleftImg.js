@@ -6,7 +6,7 @@ export default function ContentBlocklrftImg({ text, buttonText, src,children,rou
   let image;
   const navigate=useNavigate();
 
-  image = <img className="w-100 h-100" src={src} alt="icon"></img>
+  image = <img className="w-100 h-100 img-fluid" src={src} alt="icon"></img>
   return (
     <div className="d-flex height-40 contentBlock">
       <div className="w-50 text-center">
@@ -17,7 +17,7 @@ export default function ContentBlocklrftImg({ text, buttonText, src,children,rou
           <h3 className="fw-bold height-10 mt-5 mb-5 me-5 ms-5 w-auto olivetextColor">{text}</h3>
         </div>
         {children}
-        <button className="mybtn-clr height-10 mt-2 mb-3 me-5" onClick={()=>navigate(route)}>{buttonText}</button>
+        <button className="mybtn-clr height-10 mt-2 mb-5" onClick={()=>navigate(route)}>{buttonText}</button>
       </div>
     </div>
   )

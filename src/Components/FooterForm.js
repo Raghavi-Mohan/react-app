@@ -42,7 +42,7 @@ const FooterForm = () => {
     return (
         <div className="container mt-5 d-flex w-100">
             {/* Left side: Let's Connect */}
-            <div className="w-50 p-4">
+            <div className="w-35 p-2">
                 <h2 className="mb-3">Let's Connect</h2>
                 <p>We’d love to hear from you. Reach out anytime!</p>
                 <div className="d-inline-flex gap-3 align-items-center">
@@ -58,21 +58,21 @@ const FooterForm = () => {
                 </div>
             </div>
 
-            <div className="w-50 p-4">
+            <div className="w-70 p-4">
                 <form ref={form} onSubmit={handleSubmit}>
                     <div className="w-75 ms-5">
                         <p>Join the newsletter to see whats new!</p>
                     </div>
-                    <div className="ms-5 mt-2">
-                        <input name="first_name" type="text" className="form-control w-50 ms-5" placeholder="First Name" value={visitorData.firstName}
+                    <div className="ms-1 mt-2">
+                        <input name="first_name" type="text" className="form-control w-60 ms-3" placeholder="First Name" value={visitorData.firstName}
                         onChange={handleFirstNameChange}/>
                     </div>
-                    <div className="ms-5 mt-2">
-                        <input name="last_name" type="text" className="form-control w-50 ms-5" placeholder="Last Name" value={visitorData.lastName}
+                    <div className="ms-1 mt-2">
+                        <input name="last_name" type="text" className="form-control w-60 ms-3" placeholder="Last Name" value={visitorData.lastName}
                         onChange={handleLastNameChange}/>
                     </div>
-                    <div className="ms-5 mt-2">
-                        <input name="email" type="text" className="form-control w-50 ms-5" placeholder="Email" value={visitorData.email}
+                    <div className="ms-1 mt-2">
+                        <input name="email" type="text" className="form-control w-60 ms-3" placeholder="Email" value={visitorData.email}
                         onChange={handleEmailChange}/>
                     </div>
                     <div className="ms-5 w-50 mt-1 mb-2">
