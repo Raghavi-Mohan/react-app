@@ -17,7 +17,7 @@ export default function ContentBlock({text,buttonText,src,children,route}) {
   return (
     <div className={`d-flex height-40 ${contentBlock ? "contentBlock" : "plaincontentBlock"}`}>
     <div className="w-50 text-center">
-    <div className={`mb-3 ms-5 me-5  w-75 defaultmt-5 ${contentBlock ? "textclr" :"plaintext"}`}>
+    <div className={`mb-3 ms-4 me-3  w-75 defaultmt-5 ${contentBlock ? "textclr" :"plaintext"}`}>
       <h3 className={`fw-bold height-10 mb-3 ms-1 w-auto ${contentBlock ? "olivetextColor" :"plaintext"}`}>{text}</h3>
     </div>
     {children}
