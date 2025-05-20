@@ -21,7 +21,7 @@ export default function ContentBlock({text,buttonText,src,children,route}) {
       <h3 className={`fw-bold height-10 mb-3 ms-1 w-auto ${contentBlock ? "olivetextColor" :"plaintext"}`}>{text}</h3>
     </div>
     {children}
-    <button className={`mt-2 height-10 mb-4 me-4 ${contentBlock ? "mybtn-clr" :"plainbtn"}`} onClick={()=>navigate(route)}>{buttonText}</button>
+    <button className={`mt-2 height-10 mb-4 me-5 ${contentBlock ? "mybtn-clr" :"plainbtn"}`} onClick={()=>navigate(route)}>{buttonText}</button>
     </div>
     <div className="w-50 text-white text-center">
        {image}

@@ -24,7 +24,7 @@ export default class Home extends Component {
        </ContentBlockleftImg>
        <Headings  heading="Meet The Artist"/>
        <ContentBlock text="Hi there, I’m Raghavi!!" buttonText="About Me" src={me} route="aboutme">
-       <p className="text-center w-75 ms-3">I am a self representing abstract artist from my home studio just outside of Naples, Florida.</p>
+       <p className="text-center w-50 ms-5">I am a self representing abstract artist from my home studio just outside of Naples, Florida.</p>
        </ContentBlock>
        <Footer />
       </div>
