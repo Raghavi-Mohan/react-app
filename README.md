@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# 🎨 React Art Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based web application** to showcase my personal paintings, crafts, and artistic work. This project combines my passion for art with my technical skills in web development, aiming to represent not just my artwork but also my design sensibilities and ability to build user-friendly digital experiences.
 
-## Available Scripts
+## ✨ About the Project
 
-In the project directory, you can run:
+This app serves as a digital portfolio where I display various pieces of my artwork including:
 
-### `npm start`
+- Handmade paintings
+- Craft projects including customized handmade Fridge magnets, bookmarks and key chains
+- Creative experiments and styles
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project also doubles as a reflection of my **soft skills** — such as attention to detail, creativity, and visual storytelling — brought to life using **React**, **CSS/Bootstrap**, and modern front-end practices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+- 🖼️ Elegant gallery-style layout for artworks
+- 🎨 Hover and scroll animations for an immersive feel
+- 📱 Mobile-responsive design
+- 📨 Contact form powered by EmailJS
+- 🌐 Deployed via GitHub Pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- React
+- Bootstrap 5
+- Font Awesome & React Icons
+- EmailJS (for sending emails via the contact form)
+- GitHub Pages (for deployment)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📬 Live Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👉 [View the live app](https://raghavi-mohan.github.io/react-app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+This project is a creative fusion of **technology and art**, highlighting both my **front-end development** skills and my **passion for artistic expression**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧠 Purpose
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is more than a portfolio — it is a **fusion of art and engineering**, created to:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Present my art to a wider audience
+- Demonstrate my ability to build elegant UI/UX
+- Highlight how soft skills like **creativity**, **attention to detail**, and **personal branding** can be expressed through code
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
