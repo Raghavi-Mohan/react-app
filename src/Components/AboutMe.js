@@ -11,7 +11,7 @@ export default function AboutMe() {
     <div>
        <Header />
        <AboutMeContent text="Welcome!" src={ab}>
-        <p className="d-flex w-75 ms-3">
+        <p className="d-flex w-75 ms-5">
         I'm Raghavi Mohan. I am a abstract artist exploring Indian painiting and combining it with textures. I specialize in creating textured, one-of-a-kind art that adds a rich sense of depth and tactile beauty to any space. Each piece is carefully crafted to tell a story through layers, colors, and unique textures, offering a dynamic visual experience that evolves with every viewing angle.
         </p>
        </AboutMeContent>
