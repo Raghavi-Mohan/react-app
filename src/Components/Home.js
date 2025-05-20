@@ -20,11 +20,11 @@ export default class Home extends Component {
        <ContentBlock text="Explore Paintings" buttonText="View Collection" src={T_ALL_1} route="products"/>
        <Headings  heading="New Ideas"/>
        <ContentBlockleftImg text="Explore Crafts" buttonText="View Collection" src={ALL_2} route="crafts">
-       <p>View the latest collection of Crafts!</p>
+       <p className="me-1 text-center">View the latest collection of Crafts!</p>
        </ContentBlockleftImg>
        <Headings  heading="Meet The Artist"/>
-       <ContentBlock text="Hi there, I’m Raghavi" buttonText="About Me" src={me} route="aboutme">
-       <p className="text-center w-75 ms-5">I am a self representing abstract artist from my home studio just outside of Naples, Florida.</p>
+       <ContentBlock text="Hi there, I’m Raghavi!!" buttonText="About Me" src={me} route="aboutme">
+       <p className="text-center w-75 ms-3">I am a self representing abstract artist from my home studio just outside of Naples, Florida.</p>
        </ContentBlock>
        <Footer />
       </div>
