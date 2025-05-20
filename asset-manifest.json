@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.37a61dd4.css",
-    "main.js": "/react-app/static/js/main.85e0b1a9.js",
-    "static/js/453.29a0a056.chunk.js": "/react-app/static/js/453.29a0a056.chunk.js",
+    "main.css": "/react-app/static/css/main.e3e4cb62.css",
+    "main.js": "/react-app/static/js/main.a9fe44bf.js",
+    "static/js/453.dc758d66.chunk.js": "/react-app/static/js/453.dc758d66.chunk.js",
     "static/media/T_9.png": "/react-app/static/media/T_9.f938b78c778e31230df8.png",
     "static/media/ALL_2.png": "/react-app/static/media/ALL_2.9c3dcec3f968cc9eb05b.png",
     "static/media/B_1.png": "/react-app/static/media/B_1.57d28f57872218596249.png",
@@ -51,12 +51,12 @@
     "static/media/fa-v4compatibility.ttf": "/react-app/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/react-app/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/react-app/index.html",
-    "main.37a61dd4.css.map": "/react-app/static/css/main.37a61dd4.css.map",
-    "main.85e0b1a9.js.map": "/react-app/static/js/main.85e0b1a9.js.map",
-    "453.29a0a056.chunk.js.map": "/react-app/static/js/453.29a0a056.chunk.js.map"
+    "main.e3e4cb62.css.map": "/react-app/static/css/main.e3e4cb62.css.map",
+    "main.a9fe44bf.js.map": "/react-app/static/js/main.a9fe44bf.js.map",
+    "453.dc758d66.chunk.js.map": "/react-app/static/js/453.dc758d66.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37a61dd4.css",
-    "static/js/main.85e0b1a9.js"
+    "static/css/main.e3e4cb62.css",
+    "static/js/main.a9fe44bf.js"
   ]
 }
