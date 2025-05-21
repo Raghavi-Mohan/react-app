@@ -28,7 +28,7 @@ export default function Craft() {
       ))}
       <hr className="w-75 bg-dark mx-auto" />
       {keyChainItems.map((imgSrc, index) => (
-        <ProductsCard key={index} topic={`Magnet : ${index + 1}`}> 
+        <ProductsCard key={index} topic={`KeyChain : ${index + 1}`}> 
         <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
         </ProductsCard>
       ))}
