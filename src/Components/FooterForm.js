@@ -52,7 +52,7 @@ const FooterForm = () => {
                     <a href="https://www.youtube.com/@R-ArtTherapy/shorts" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-youtube fa-lg text-dark"></i>
                     </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.tiktok.com/@textureandtones?_t=ZP-8wXebx8Cwwh&_r=1" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-tiktok fa-lg text-dark"></i>
                     </a>
                 </div>
