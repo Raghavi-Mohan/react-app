@@ -58,12 +58,12 @@ const FooterForm = () => {
                 </div>
             </div>
 
-            <div className="w-70 p-4">
+            <div className="w-auto ms-auto p-4 text-end">
                 <form ref={form} onSubmit={handleSubmit}>
-                    <div className="w-75 ms-5">
+                    <div className="w-75 ms-auto text-center">
                         <p>Join the newsletter to see whats new!</p>
                     </div>
-                    <div className="ms-1 mt-2">
+                    <div className="ms-1 mt-2 ">
                         <input name="first_name" type="text" className="form-control w-60 ms-3" placeholder="First Name" value={visitorData.firstName}
                         onChange={handleFirstNameChange}/>
                     </div>
