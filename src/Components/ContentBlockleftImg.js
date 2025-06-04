@@ -14,7 +14,7 @@ export default function ContentBlocklrftImg({ text, buttonText, src, children, r
       </div>
       <div className="w-50 text-center mx-auto">
         <div className="mb-3 textclr defaultmt-5 w-75 text-center mx-auto">
-          <h3 className="fw-bold height-10 mt-5 mb-5 olivetextColor">{text}</h3>
+          <h3 className="fw-bold mt-5 mb-5 olivetextColor">{text}</h3>
         </div>
         <div className='d-flex justify-content-center'>
           {children}
