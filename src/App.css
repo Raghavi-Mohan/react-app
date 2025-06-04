@@ -40,6 +40,7 @@
   background-color: #d6d6a7;
   border-color: #d3d389;
 }
+
 .navColor{
   background-color: #faf3e6;
 }
@@ -143,8 +144,9 @@
 }
 
 .nav-link:hover {
-  background-color: white; /* light blue */
+  background-color: #dabba2; /* light blue */
   color: black; /* Bootstrap primary */
+  border-radius: 80%;
 }
 .navbar .nav-link {
   text-decoration: none !important;
