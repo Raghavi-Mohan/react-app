@@ -10,8 +10,8 @@ export default class Header extends Component {
                     <div className='w-25 d-flex'>
                         <h2 className='logo ms-1 mt-1'>Art by TextureAndTones</h2>
                     </div>
-                    <div className='w-50 mb-5 me-5'>
-                        <ul className="navbar-nav flex-row">
+                    <div className='w-50 mb-5 text-end'>
+                        <ul className="navbar-nav flex-row justify-content-end pe-2">
                             <li className="nav-item mx-1">
                                 <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active myactive-link" : "")} aria-current="page" to="/">Home</NavLink>
                             </li>

@@ -16,12 +16,14 @@ export default function ContentBlock({text,buttonText,src,children,route}) {
       }
   return (
     <div className={`d-flex height-40 ${contentBlock ? "contentBlock" : "plaincontentBlock"}`}>
-    <div className="w-50 text-center">
-    <div className={`mb-3 ms-4 me-3  w-75 defaultmt-5 ${contentBlock ? "textclr" :"plaintext"}`}>
-      <h3 className={`fw-bold height-10 mb-3 ms-1 w-auto ${contentBlock ? "olivetextColor" :"plaintext"}`}>{text}</h3>
+    <div className="w-50 text-center mx-auto">
+    <div className={`mb-3 w-75 defaultmt-5 text-center mx-auto ${contentBlock ? "textclr" :"plaintext"}`}>
+      <h3 className={`fw-bold h-auto mb-3 ${contentBlock ? "olivetextColor" :"plaintext"}`}>{text}</h3>
     </div>
+    <div className='d-flex justify-content-center'>
     {children}
-    <button className={`mt-2 height-10 mb-4 me-2 ${contentBlock ? "mybtn-clr" :"plainbtn"}`} onClick={()=>navigate(route)}>{buttonText}</button>
+    </div>
+    <button className={`mt-2 height-10 mb-4 me-2 w-auto ${contentBlock ? "mybtn-clr" :"plainbtn"}`} onClick={()=>navigate(route)}>{buttonText}</button>
     </div>
     <div className="w-50 text-white text-center">
        {image}
