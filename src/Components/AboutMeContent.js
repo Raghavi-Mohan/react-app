@@ -16,7 +16,9 @@ export default function aboutMeContent({text,src,children}) {
     <div className={`mb-3 ms-3  w-90 mt-5 me-2 ${contentBlock ? "textclr" :"plaintext"}`}>
       <h3 className={`fw-bold height-10  mb-5 ms-2 w-auto ${contentBlock ? "abouttextColor" :"plaintext"}`}>{text}</h3>
     </div>
+    <div className='d-flex justify-content-center'>
     {children}
+    </div>
     </div>
     <div className="w-50 text-white text-center">
        {image}

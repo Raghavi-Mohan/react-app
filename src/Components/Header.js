@@ -34,7 +34,7 @@ export default class Header extends Component {
                                 </a>
                             </li>
                             <li className="nav-item  mt-2">
-                                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="text-dark">
+                                <a href="https://www.tiktok.com/@textureandtones?_t=ZP-8wXebx8Cwwh&_r=1" target="_blank" rel="noopener noreferrer" className="text-dark">
                                     <RiTiktokFill size={20} />
                                 </a>
                             </li>*/}
