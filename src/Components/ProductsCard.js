@@ -1,19 +1,16 @@
 import React, { Fragment } from 'react'
 
-export default function ProductsCard({ topic, size, children }) {
+export default function ProductsCard({ children }) {
     console.log(children);
     return (
         <Fragment>
             <div className="Mycard w-25 m-4 d-inline-block">
-                <div className="card-header w-75 text-center">
-                    <h5>{topic}</h5>
-                </div>
                 <div className="Mycard-body zoom-hover">
                     {children}
                 </div>
-                <div className="Mycard-footer text-start">
-                <h6>{size}</h6>                
-                </div>
+               {/*} <div className="Mycard-footer text-start">
+                <h6 className="font-adjust">{size}</h6>                
+                </div>*/}
             </div>
         </Fragment>
     )

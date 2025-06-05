@@ -18,27 +18,43 @@ export default function Craft() {
 
   return (
     <div>
-       <Header />
-       <Headings  heading="Fridge Magnets | Key Chains | BookMarks"/>
-       <hr className="w-75 bg-dark mx-auto" />
-       {MagnetItems.map((imgSrc, index) => (
-        <ProductsCard key={index} topic={`Magnet : ${index + 1}`} size="Size: 1X2"> 
-        <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+      <Header />
+      <Headings heading="Stick a Little Story to Your Space - Fridge Magnets" />
+      <hr className="w-75 bg-dark mx-auto" />
+      {MagnetItems.map((imgSrc, index) => (
+        //<ProductsCard key={index} topic={`Minis : ${index + 1}`}>
+        <ProductsCard key={index}>
+          <figure key={index} className="text-center stylish-caption">
+            <figcaption className="mt-2">{`Minis # ${index + 1}`}</figcaption>
+            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+            <figcaption className="mt-2">Size: 1X2</figcaption>
+          </figure>
         </ProductsCard>
       ))}
       <hr className="w-75 bg-dark mx-auto" />
+      <Headings heading="Tiny Sculptures That Travel with You - Key Chains" />
+
       {keyChainItems.map((imgSrc, index) => (
-        <ProductsCard key={index} topic={`KeyChain : ${index + 1}`}> 
-        <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+        <ProductsCard key={index}>
+          <figure key={index} className="text-center stylish-caption">
+            <figcaption className="mt-2">{`Charms # ${index + 1}`}</figcaption>
+            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+            <figcaption className="mt-2">Size: 1X2</figcaption>
+          </figure>
         </ProductsCard>
       ))}
       <hr className="w-75 bg-dark mx-auto" />
+      <Headings heading="Textured Tales for Every Page - BookMarks" />
       {bookItems.map((imgSrc, index) => (
-        <ProductsCard key={index} topic={`BookMark : ${index + 1}`}> 
-        <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+        <ProductsCard key={index} >
+          <figure key={index} className="text-center stylish-caption">
+            <figcaption className="mt-2">{`Story Stems # ${index + 1}`}</figcaption>
+            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+            <figcaption className="mt-2">Size: 1X2</figcaption>
+          </figure>
         </ProductsCard>
       ))}
-       <Footer />
+      <Footer />
     </div>
   )
 }

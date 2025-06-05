@@ -40,6 +40,21 @@
   background-color: #d6d6a7;
   border-color: #d3d389;
 }
+.font-adjust{
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+.stylish-caption {
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-style: italic;
+  color: #cd884f;
+  padding-top: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 0.7rem;
+}
 
 .navColor{
   background-color: #faf3e6;
@@ -65,18 +80,18 @@
   color: #cdab90;
   font-family: 'Dancing Script',cursive;
   font-weight: bold;
-  font-size: x-large;
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  letter-spacing: 1px;
   opacity: 0;
   animation: fadeInLeft 1.5s ease-out forwards;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
 .defaultmt-5{
   margin-top: 50%;
 }
 .olivetextColor{
   color: #8e8e59;
+  background-color: #f3f3d1;
   font-family: Helvetica;
   font-weight: bold;
   font-size: x-large;
@@ -158,14 +173,14 @@
 }
 .craft-heading {
   font-family: 'Playfair Display', serif; /* Elegant serif font */
-  font-size: 2.2rem;
-  color: #3c2f2f; /* Deep earthy tone */
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  color: #cdab90; /* Deep earthy tone */
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   letter-spacing: 1px;
   position: relative;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   animation: fadeInUp 1.5s ease both;
 }
 @keyframes fadeInUp {

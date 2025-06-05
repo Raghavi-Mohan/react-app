@@ -8,7 +8,7 @@ export default class Header extends Component {
             <Fragment>
                 <nav className='navbar navColor container-fluid d-flex justify-content-between'>
                     <div className='w-25 d-flex'>
-                        <h2 className='logo ms-1 mt-1'>Art by TextureAndTones</h2>
+                        <h2 className='logo ms-2 mt-1'>Art by TextureAndTones</h2>
                     </div>
                     <div className='w-50 mb-5 text-end'>
                         <ul className="navbar-nav flex-row justify-content-end pe-2">

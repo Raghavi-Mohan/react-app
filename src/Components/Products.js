@@ -7,21 +7,36 @@ import Footer from './Footer';
 
 
 export default function Products() {
-//const items = [T_1, T_2,T_3,T_4,T_5, T_6,T_7,T_8,T_9]; // or fetched from API, etc.
-const importAll = (requireContext) => requireContext.keys().map(requireContext);
-const textures = importAll(require.context('../Asset/paintings', false, /\.(png|jpe?g|svg)$/));
+  const importAll = (requireContext) =>
+requireContext.keys().map((key) => {
+    const fullName = key.replace('./', '').replace(/\.[^/.]+$/, ''); // e.g., "texture_01"
+    const [prefix, suffix] = fullName.split('_'); // split at underscore
 
-return (
+    return {
+      src: requireContext(key),
+      name: fullName,
+      prefix: prefix || '', 
+      suffix: suffix || ''  
+    };
+  });
+  //const importAll = (requireContext) => requireContext.keys().map(requireContext);
+  const textures = importAll(require.context('../Asset/paintings', false, /\.(png|jpe?g|svg)$/));
+
+  return (
     <div>
-       <Header />
-       <Headings  heading="Original Arts"/>
-       <hr className="w-75 bg-dark mx-auto" />
-       {textures.map((imgSrc, index) => (
-        <ProductsCard key={index} topic={`Textures : ${index + 1}`} size="Size: 6X6"> 
-        <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+      <Header />
+      <Headings heading="Original works created to be seen, felt, and remembered." />
+      <hr className="w-75 bg-dark mx-auto" />
+      {textures.map((imgSrc, index) => (
+        <ProductsCard key={index} >
+          <figure key={index} className="text-center stylish-caption">
+            <img className="w-75 h-75 img-fluid" src={imgSrc.src} alt={imgSrc.prefix}></img>
+            <figcaption className="mt-2">'{imgSrc.prefix}'</figcaption>
+            <figcaption className="mt-2">Size : {imgSrc.suffix}</figcaption>
+          </figure>
         </ProductsCard>
       ))}
-       <Footer />
+      <Footer />
     </div>
   )
 }

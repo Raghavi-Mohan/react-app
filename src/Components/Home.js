@@ -17,12 +17,12 @@ export default class Home extends Component {
       <div>
         <Header />
        <Headings  heading="Crafted with Passion, Painted with Purpose"/>
-       <ContentBlock text="Explore Paintings" buttonText="View Collection" src={T_ALL_1} route="products"/>
-       <Headings  heading="New Ideas"/>
-       <ContentBlockleftImg text="Explore Crafts" buttonText="View Collection" src={ALL_2} route="crafts">
-       <p className="me-1 text-center">View the latest collection of Crafts!</p>
+       <ContentBlock text="Step Into the Studio" buttonText="View Studio" src={T_ALL_1} route="products"/>
+       <Headings  heading="Mini Treasures, Handcrafted with Heart"/>
+       <ContentBlockleftImg text="Pocket & Page Collection" buttonText="View Collection" src={ALL_2} route="crafts">
+       <p className="me-1 w-75 text-center">Handcrafted magnets, bookmarks, and keychains—small in size, rich in story.</p>
        </ContentBlockleftImg>
-       <Headings  heading="Meet The Artist"/>
+       <Headings  heading="Behind the Brush"/>
        <ContentBlock text="Hi there, I’m Raghavi!!" buttonText="About Me" src={me} route="aboutme">
        <p className="text-center w-75 ms-1">I am a self representing abstract artist from my home studio just outside of Naples, Florida. My artistic process is driven by spontaneity and layered techniques. I create artwork using acrylics and textures to show peaceful and lively moments together.</p>
        </ContentBlock>
