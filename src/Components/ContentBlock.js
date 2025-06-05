@@ -9,7 +9,7 @@ export default function ContentBlock({text,buttonText,src,children,route}) {
 
     if(src.includes("my")){
       contentBlock=false;
-       image = <img className="width-90 img-fluid height-90 me-5 mt-5 rounded-circle" src={src} alt="icon"></img>
+       image = <img className="width-90 img-fluid h-100 me-5 mt-5 rounded-circle" src={src} alt="icon"></img>
       }else{
         contentBlock=true;
         image = <img className="w-100 h-100 img-fluid" src={src} alt="icon"></img>

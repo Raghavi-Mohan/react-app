@@ -5,7 +5,7 @@ export default function aboutMeContent({text,src,children}) {
     let contentBlock;
     if(src.includes("my")){
       contentBlock=false;
-       image = <img className="w-100 h-50 mt-5 rounded-circle img-fluid" src={src} alt="icon"></img>
+       image = <img className="w-100 h-75 mt-5 rounded-circle img-fluid" src={src} alt="icon"></img>
       }else{
         contentBlock=true;
         image = <img className="w-100 h-75 mt-5 img-fluid" src={src} alt="icon"></img> 
