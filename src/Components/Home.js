@@ -24,7 +24,7 @@ export default class Home extends Component {
        </ContentBlockleftImg>
        <Headings  heading="Meet The Artist"/>
        <ContentBlock text="Hi there, I’m Raghavi!!" buttonText="About Me" src={me} route="aboutme">
-       <p className="text-center w-50 ms-1">I am a self representing abstract artist from my home studio just outside of Naples, Florida.</p>
+       <p className="text-center w-50 ms-1">I am a self representing abstract artist from my home studio just outside of Naples, Florida. My artistic process is driven by spontaneity and layered techniques. I work primarily with acrylics, mixed media, and textural elements to build atmospheric compositions that evoke both movement and stillness. From textured canvases to sculptural forms, I aim to create art that invites the viewer to pause, interpret, and connect</p>
        </ContentBlock>
        <Footer />
       </div>
