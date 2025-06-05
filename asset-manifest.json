@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.25205433.css",
+    "main.css": "/react-app/static/css/main.c0bb1647.css",
     "main.js": "/react-app/static/js/main.a2808c55.js",
     "static/js/453.fc43a62c.chunk.js": "/react-app/static/js/453.fc43a62c.chunk.js",
     "static/media/Velvet Jewel_8\".png": "/react-app/static/media/Velvet Jewel_8\".f938b78c778e31230df8.png",
@@ -80,12 +80,12 @@
     "static/media/fa-v4compatibility.ttf": "/react-app/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/react-app/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/react-app/index.html",
-    "main.25205433.css.map": "/react-app/static/css/main.25205433.css.map",
+    "main.c0bb1647.css.map": "/react-app/static/css/main.c0bb1647.css.map",
     "main.a2808c55.js.map": "/react-app/static/js/main.a2808c55.js.map",
     "453.fc43a62c.chunk.js.map": "/react-app/static/js/453.fc43a62c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25205433.css",
+    "static/css/main.c0bb1647.css",
     "static/js/main.a2808c55.js"
   ]
 }
