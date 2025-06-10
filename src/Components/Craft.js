@@ -27,7 +27,7 @@ export default function Craft() {
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Minis # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
-            <figcaption className="mt-2">Size: 1X2</figcaption>
+            <figcaption className="mt-2"></figcaption>
           </figure>
         </ProductsCard>
       ))}
@@ -39,7 +39,7 @@ export default function Craft() {
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Charms # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
-            <figcaption className="mt-2">Size: 1X2</figcaption>
+            <figcaption className="mt-2"></figcaption>
           </figure>
         </ProductsCard>
       ))}
@@ -50,7 +50,7 @@ export default function Craft() {
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Story Stems # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
-            <figcaption className="mt-2">Size: 1X2</figcaption>
+            <figcaption className="mt-2"></figcaption>
           </figure>
         </ProductsCard>
       ))}
