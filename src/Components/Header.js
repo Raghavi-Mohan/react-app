@@ -8,21 +8,21 @@ export default class Header extends Component {
             <Fragment>
                 <nav className='navbar navColor container-fluid d-flex justify-content-between'>
                     <div className='w-25 d-flex'>
-                        <h2 className='logo ms-2 mt-1'>Art by TextureAndTones</h2>
+                        <h2 className='logo ms-2 mt-1 ms-3 '>Art by TextureAndTones</h2>
                     </div>
-                    <div className='w-50 mb-5 text-end'>
-                        <ul className="navbar-nav flex-row justify-content-end pe-2">
+                    <div className='w-50 mb-5 navfont text-end'>
+                        <ul className="navbar-nav flex-row justify-content-end pe-3">
                             <li className="nav-item mx-1">
-                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active myactive-link" : "")} aria-current="page" to="/">Home</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link navfont pe-1" + (isActive ? " active myactive-link" : "")} aria-current="page" to="/">Home</NavLink>
                             </li>
                             <li className="nav-item mx-1">
-                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active myactive-link" : "")} to="/products">Paintings</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link navfont pe-1" + (isActive ? " active myactive-link" : "")} to="/products">Paintings</NavLink>
                             </li>
                             <li className="nav-item mx-1">
-                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active myactive-link" : "")} to="/crafts">Crafts</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link navfont pe-1" + (isActive ? " active myactive-link" : "")} to="/crafts">Crafts</NavLink>
                             </li>
                             <li className="nav-item mx-1">
-                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active myactive-link" : "")} to="/aboutme">About</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link navfont pe-1" + (isActive ? " active myactive-link" : "")} to="/aboutme">About</NavLink>
                             </li>
                            {/* <li className="nav-item  mt-2">
                                 <a href="https://www.instagram.com/texturedcanvaspainting" target="_blank" rel="noopener noreferrer" className="text-dark mx-2">
