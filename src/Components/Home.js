@@ -20,11 +20,11 @@ export default class Home extends Component {
        <ContentBlock text="Step Into the Studio" buttonText="View Studio" src={T_ALL_1} route="products"/>
        <Headings  heading="Mini Treasures, Handcrafted with Heart"/>
        <ContentBlockleftImg text="Pocket & Page Collection" buttonText="View Collection" src={ALL_2} route="crafts">
-       <p className="me-1 w-75 text-center">Handcrafted magnets, bookmarks, and keychains—small in size, rich in story.</p>
+       <p className="me-1 w-75 font text-center">Handcrafted magnets, bookmarks, and keychains—small in size, rich in story.</p>
        </ContentBlockleftImg>
        <Headings  heading="Behind the Brush"/>
        <ContentBlock text="Hi there, I’m Raghavi!!" buttonText="About Me" src={me} route="aboutme">
-       <p className="text-center w-100 ms-1">I am a self representing abstract artist from my home studio just outside of Naples, Florida. My artistic process is driven by spontaneity and layered techniques. I create artwork using acrylics and textures to show peaceful and lively moments together.</p>
+       <p className="text-center font w-100 ms-1">I am a self representing abstract artist from my home studio just outside of Naples, Florida. My artistic process is driven by spontaneity and layered techniques. I create artwork using acrylics and textures to show peaceful and lively moments together.</p>
        </ContentBlock>
        <Footer />
       </div>

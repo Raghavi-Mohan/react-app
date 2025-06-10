@@ -6,6 +6,10 @@
   color: black;
   border: none;
   cursor: pointer;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+.font{
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
 }
 .plainbtn{
   background-color: #ceb8a6;
@@ -17,6 +21,7 @@
 .textclr{
   background-color: #dadaa3;
   color: black;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
 
 .zoom-hover img {
@@ -100,7 +105,7 @@
   background-color: #f3f3d1;
   font-family: 'sans-serif';
   font-weight: bold;
-  font-size: x-large;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
 }
 .plaintext{
   font-family: 'sans-serif';
