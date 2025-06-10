@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.8ace6418.css",
-    "main.js": "/react-app/static/js/main.58e66345.js",
+    "main.css": "/react-app/static/css/main.d8865c8b.css",
+    "main.js": "/react-app/static/js/main.1465dd3f.js",
     "static/js/453.fc43a62c.chunk.js": "/react-app/static/js/453.fc43a62c.chunk.js",
     "static/media/Velvet Jewel_8\".png": "/react-app/static/media/Velvet Jewel_8\".f938b78c778e31230df8.png",
     "static/media/M_11.png": "/react-app/static/media/M_11.e753731068aca4d476ef.png",
@@ -100,12 +100,12 @@
     "static/media/fa-v4compatibility.ttf": "/react-app/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/react-app/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/react-app/index.html",
-    "main.8ace6418.css.map": "/react-app/static/css/main.8ace6418.css.map",
-    "main.58e66345.js.map": "/react-app/static/js/main.58e66345.js.map",
+    "main.d8865c8b.css.map": "/react-app/static/css/main.d8865c8b.css.map",
+    "main.1465dd3f.js.map": "/react-app/static/js/main.1465dd3f.js.map",
     "453.fc43a62c.chunk.js.map": "/react-app/static/js/453.fc43a62c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ace6418.css",
-    "static/js/main.58e66345.js"
+    "static/css/main.d8865c8b.css",
+    "static/js/main.1465dd3f.js"
   ]
 }
