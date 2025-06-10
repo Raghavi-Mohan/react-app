@@ -43,8 +43,8 @@ const FooterForm = () => {
         <div className="container mt-5 d-flex w-100">
             {/* Left side: Let's Connect */}
             <div className="w-35 p-2">
-                <h2 className="mb-3">Let's Connect</h2>
-                <p>We’d love to hear from you. Reach out anytime!</p>
+                <h2 className="mb-3 footerfont">Let's Connect</h2>
+                <p className="footerfont">We’d love to hear from you. Reach out anytime!</p>
                 <div className="d-inline-flex gap-3 align-items-center">
                     <a href="https://www.instagram.com/texturedcanvaspainting" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-instagram fa-lg text-dark"></i>
@@ -56,7 +56,7 @@ const FooterForm = () => {
                         <i className="fab fa-tiktok fa-lg text-dark"></i>
                     </a>
                 </div>
-                <footer className="py-6 bg-gray-800 text-dark mt-3 text-center text-sm">
+                <footer className="py-6 footerfont bg-gray-800 text-dark mt-3 text-center text-sm">
                     © {new Date().getFullYear()} Raghavi Mohan. All rights reserved.
                 </footer>
             </div>
@@ -64,7 +64,7 @@ const FooterForm = () => {
             <div className="w-auto ms-auto p-4 text-end">
                 <form ref={form} onSubmit={handleSubmit}>
                     <div className="w-75 ms-auto text-center">
-                        <p>Join the newsletter to see whats new!</p>
+                        <p className='footerfont'>Join the newsletter to see whats new!</p>
                     </div>
                     <div className="ms-1 mt-2 ">
                         <input name="first_name" type="text" className="form-control w-60 ms-3" placeholder="First Name" value={visitorData.firstName}

@@ -11,6 +11,9 @@
 .font{
     font-size: clamp(0.8rem, 2.5vw, 1.2rem);
 }
+.footerfont{
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
 .plainbtn{
   background-color: #ceb8a6;
   color: black;
