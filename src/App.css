@@ -27,6 +27,16 @@
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #000 !important; /* black */
+  font-size: 30px; /* optional: increase size */
+}
+
+/* Optional: style the button container */
+.slick-prev, .slick-next {
+  z-index: 10; /* ensure they appear above content */
+}
 .zoom-hover img {
   transition: transform 0.7s ease;
 }
@@ -45,6 +55,12 @@
   }
 }
 
+.slider-img:hover {
+  transform: scale(1.2);
+}
+.slider-img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 .w-80{
   width: 70%;
 }
@@ -199,6 +215,68 @@
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   animation: fadeInUp 1.5s ease both;
 }
+
+.description {
+  font-family: 'sans-serif';/* Elegant serif font */
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08rem;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+
+@media (max-width: 576px) {
+  .slider-image {
+    max-width: 90%;
+  }
+}
+.slick-track {
+  display: flex !important;
+}
+.slider-container {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.slide-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 90%;
+  height: 100%;
+  border-radius: 8px;
+  box-sizing: border-box;
+  object-fit: cover !important;
+  margin:  auto;
+}
+
+@media (max-width: 768px) {
+  .slide-wrapper {
+    max-height: 350px;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-wrapper {
+    max-height: 300px;
+    aspect-ratio: 3 / 4;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

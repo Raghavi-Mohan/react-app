@@ -23,7 +23,8 @@ export default function Craft() {
       <hr className="w-75 bg-dark mx-auto" />
       {MagnetItems.map((imgSrc, index) => (
         //<ProductsCard key={index} topic={`Minis : ${index + 1}`}>
-        <ProductsCard key={index}>
+        //<ProductsCard key={index} paintingId={`Minis ${index + 1}`}>
+                <ProductsCard key={index} paintingId={`Minis`}>
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Minis # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
@@ -35,7 +36,7 @@ export default function Craft() {
       <Headings heading="Tiny Sculptures That Travel with You - Key Chains" />
 
       {keyChainItems.map((imgSrc, index) => (
-        <ProductsCard key={index}>
+        <ProductsCard key={index} paintingId={`Charms`}>
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Charms # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
@@ -46,7 +47,7 @@ export default function Craft() {
       <hr className="w-75 bg-dark mx-auto" />
       <Headings heading="Textured Tales for Every Page - BookMarks" />
       {bookItems.map((imgSrc, index) => (
-        <ProductsCard key={index} >
+        <ProductsCard key={index} paintingId={`StoryStems`}>
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Story Stems # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>

@@ -8,17 +8,17 @@ import Footer from './Footer';
 
 export default function Products() {
   const importAll = (requireContext) =>
-requireContext.keys().map((key) => {
-    const fullName = key.replace('./', '').replace(/\.[^/.]+$/, ''); // e.g., "texture_01"
-    const [prefix, suffix] = fullName.split('_'); // split at underscore
+    requireContext.keys().map((key) => {
+      const fullName = key.replace('./', '').replace(/\.[^/.]+$/, ''); // e.g., "texture_01"
+      const [prefix, suffix] = fullName.split('_'); // split at underscore
 
-    return {
-      src: requireContext(key),
-      name: fullName,
-      prefix: prefix || '', 
-      suffix: suffix || ''  
-    };
-  });
+      return {
+        src: requireContext(key),
+        name: fullName,
+        prefix: prefix || '',
+        suffix: suffix || ''
+      };
+    });
   //const importAll = (requireContext) => requireContext.keys().map(requireContext);
   const textures = importAll(require.context('../Asset/paintings', false, /\.(png|jpe?g|svg)$/));
 
@@ -28,7 +28,7 @@ requireContext.keys().map((key) => {
       <Headings heading="Original works created to be seen, felt, and remembered." />
       <hr className="w-75 bg-dark mx-auto" />
       {textures.map((imgSrc, index) => (
-        <ProductsCard key={index} >
+        <ProductsCard key={index} paintingId={imgSrc.prefix}>
           <figure key={index} className="text-center stylish-caption">
             <img className="w-75 h-75 img-fluid" src={imgSrc.src} alt={imgSrc.prefix}></img>
             <figcaption className="mt-2">'{imgSrc.prefix}'</figcaption>

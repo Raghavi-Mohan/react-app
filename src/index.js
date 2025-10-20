@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { HashRouter } from 'react-router-dom';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
