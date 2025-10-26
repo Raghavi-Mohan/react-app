@@ -7,6 +7,7 @@ import Craft from './Components/Craft';
 import ScrollTop from './Components/ScrollTop';
 import { Routes, Route } from 'react-router-dom';
 import PaintingDetail from './Components/PaintingDetail';
+import LinksPage from './Components/LinksPage';   
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/painting/:title" element={<PaintingDetail />} />
           <Route path="/crafts" element={<Craft />} />
+          <Route path="/links" element={<LinksPage />} />
         </Routes>
     </div>
   );
