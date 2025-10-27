@@ -442,15 +442,14 @@ The interior mockup is for display purposes only and is not to scale.`
         options:KeychianMaterialOptions,
         slider: [
             safeRequire('charms_1.png'),
-            safeRequire('charms_2.jpg'),
+            safeRequire('charms_2.png'),
             safeRequire('charms_3.png'),
             safeRequire('charms_4.png'),
             safeRequire('charms_5.png'),
             safeRequire('charms_6.png'),
             safeRequire('charms_7.jpg'),
             safeRequire('charms_8.jpg'),
-            safeRequire('charms_9.jpg'),
-            safeRequire('charms_11.jpg')
+            safeRequire('charms_9.jpg')
         ],
         description: descCrafts
     },
