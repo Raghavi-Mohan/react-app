@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-app/static/css/main.9733cc65.css",
-    "main.js": "/react-app/static/js/main.008361b4.js",
+    "main.js": "/react-app/static/js/main.78aef64d.js",
     "static/js/453.fc43a62c.chunk.js": "/react-app/static/js/453.fc43a62c.chunk.js",
     "static/media/Window to Spring.jpg": "/react-app/static/media/Window to Spring.32f3becb027d574df25f.jpg",
     "static/media/charms_2.png": "/react-app/static/media/charms_2.39e5cfd85117c58fe08c.png",
@@ -127,7 +127,6 @@
     "static/media/Melody in Gold_36x28.png": "/react-app/static/media/Melody in Gold_36x28.a579e282ba2465b4ee30.png",
     "static/media/Melody in Gold.png": "/react-app/static/media/Melody in Gold.f0d3b85a57c84e6bfb75.png",
     "static/media/charms_6.jpg": "/react-app/static/media/charms_6.6c56a6f358bf8522cd85.jpg",
-    "static/media/AB_1.png": "/react-app/static/media/AB_1.961d217fd6751cbf797f.png",
     "static/media/charms_7.jpg": "/react-app/static/media/charms_7.85eed31b4590c13ca335.jpg",
     "static/media/Tribal Grace_20x16.png": "/react-app/static/media/Tribal Grace_20x16.0abc4d40540ea26ce9c4.png",
     "static/media/C_16.jpg": "/react-app/static/media/C_16.1dfef9a9459b475975b5.jpg",
@@ -144,6 +143,7 @@
     "static/media/Grace in Silence.png": "/react-app/static/media/Grace in Silence.9100cb03f0372cad2b74.png",
     "static/media/Grace in Silence_20x20.png": "/react-app/static/media/Grace in Silence_20x20.9100cb03f0372cad2b74.png",
     "static/media/T_ALL_1.png": "/react-app/static/media/T_ALL_1.338c3131f6a61469dd9d.png",
+    "static/media/AB_1.png": "/react-app/static/media/AB_1.0e7317faa810c8c1ea66.png",
     "static/media/Lavender Loop.png": "/react-app/static/media/Lavender Loop.9961365e625be072e843.png",
     "static/media/Lavender Loop_4x16.png": "/react-app/static/media/Lavender Loop_4x16.9961365e625be072e843.png",
     "static/media/Framed by Flora.png": "/react-app/static/media/Framed by Flora.1ee036e6069e63a001af.png",
@@ -177,11 +177,11 @@
     "static/media/slick.woff": "/react-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/react-app/index.html",
     "main.9733cc65.css.map": "/react-app/static/css/main.9733cc65.css.map",
-    "main.008361b4.js.map": "/react-app/static/js/main.008361b4.js.map",
+    "main.78aef64d.js.map": "/react-app/static/js/main.78aef64d.js.map",
     "453.fc43a62c.chunk.js.map": "/react-app/static/js/453.fc43a62c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9733cc65.css",
-    "static/js/main.008361b4.js"
+    "static/js/main.78aef64d.js"
   ]
 }
