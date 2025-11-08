@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.9733cc65.css",
-    "main.js": "/react-app/static/js/main.78aef64d.js",
+    "main.css": "/react-app/static/css/main.c7a43181.css",
+    "main.js": "/react-app/static/js/main.a003eca7.js",
     "static/js/453.fc43a62c.chunk.js": "/react-app/static/js/453.fc43a62c.chunk.js",
     "static/media/Window to Spring.jpg": "/react-app/static/media/Window to Spring.32f3becb027d574df25f.jpg",
     "static/media/charms_2.png": "/react-app/static/media/charms_2.39e5cfd85117c58fe08c.png",
@@ -27,6 +27,7 @@
     "static/media/M_12.png": "/react-app/static/media/M_12.fb6be39b2830357c532d.png",
     "static/media/Lavender Loop_1.png": "/react-app/static/media/Lavender Loop_1.aa5f8b727d3179c89baa.png",
     "static/media/Lavender Loop_2.png": "/react-app/static/media/Lavender Loop_2.f5e038d429e3fb79930a.png",
+    "static/media/B_ALL_1.png": "/react-app/static/media/B_ALL_1.a97b6ac5a9e67e562e09.png",
     "static/media/charms_4.png": "/react-app/static/media/charms_4.d912f0888e8360dfbc14.png",
     "static/media/ALL_2.png": "/react-app/static/media/ALL_2.9c3dcec3f968cc9eb05b.png",
     "static/media/B_1.png": "/react-app/static/media/B_1.57d28f57872218596249.png",
@@ -54,6 +55,7 @@
     "static/media/M_1.png": "/react-app/static/media/M_1.2911c2a6f8b49b4c6ef1.png",
     "static/media/M_7.png": "/react-app/static/media/M_7.b0781eabb6288f997114.png",
     "static/media/Stories in Her Stance_12x16.png": "/react-app/static/media/Stories in Her Stance_12x16.72f4e1f8bab95a01c0a2.png",
+    "static/media/C_ALL_1.png": "/react-app/static/media/C_ALL_1.8fc6c58033b94f1def1f.png",
     "static/media/Floral Reverie_2.jpg": "/react-app/static/media/Floral Reverie_2.a185e48ad09e84b3d2d5.jpg",
     "static/media/C_3.png": "/react-app/static/media/C_3.7fc920b4f5b65c24c639.png",
     "static/media/C_1.png": "/react-app/static/media/C_1.5294d7aa58779ea80fc3.png",
@@ -176,12 +178,12 @@
     "static/media/slick.ttf": "/react-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/react-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/react-app/index.html",
-    "main.9733cc65.css.map": "/react-app/static/css/main.9733cc65.css.map",
-    "main.78aef64d.js.map": "/react-app/static/js/main.78aef64d.js.map",
+    "main.c7a43181.css.map": "/react-app/static/css/main.c7a43181.css.map",
+    "main.a003eca7.js.map": "/react-app/static/js/main.a003eca7.js.map",
     "453.fc43a62c.chunk.js.map": "/react-app/static/js/453.fc43a62c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9733cc65.css",
-    "static/js/main.78aef64d.js"
+    "static/css/main.c7a43181.css",
+    "static/js/main.a003eca7.js"
   ]
 }
