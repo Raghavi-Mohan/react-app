@@ -1,26 +1,69 @@
-import React from 'react'
-import AboutMeContent from './AboutMeContent';
+// ...existing code...
+import React, { useEffect } from 'react'
 import Header from './Header';
 import Footer from './Footer';
 import ab from '../Asset/AB_1.png'
 import abme from '../Asset/my_2.png'
-
+import '../AboutMe.css'
+// ...existing code...
 
 export default function AboutMe() {
+  useEffect(() => {
+    const items = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(i => obs.observe(i));
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <div>
-       <Header />
-       <AboutMeContent text="Discover My Art!" src={ab}>
-        <p className="w-75 font text-center">
-        I'm Raghavi Mohan. I am a abstract artist exploring Indian painting and combining it with textures. I specialize in creating textured, one-of-a-kind art that adds a rich sense of depth and tactile beauty to any space. Each piece is carefully crafted to tell a story through layers, colors, and unique textures, offering a dynamic visual experience that evolves with every viewing angle.
-        </p>
-       </AboutMeContent>
-       <AboutMeContent text="More Than a Signature" src={abme}>
-        <p className="justify-content-center font text-center align-items-center w-75 ">
-        As an abstract artist, my work explores the dynamic interplay between traditional Indian painting and contemporary textural techniques. I am deeply inspired by the rich history and symbolism of Indian art, yet I seek to redefine it by merging it with innovative textures, creating pieces that are both tactile and visually captivating. 
-        </p>
-       </AboutMeContent>
-       <Footer />
+    <div className="about-page">
+      <Header />
+      <main className="container py-5">
+        <section className="hero reveal">
+          <div className="row align-items-center gx-5">
+            <div className="col-md-6 text-center text-md-start">
+              <h1 className="display-5 fw-bold">Discover My Art</h1>
+              <p className="lead text-muted">
+                I'm Raghavi Mohan — an abstract artist exploring Indian painting combined with rich textures. Each piece is crafted to add tactile depth and evolving visual interest.
+              </p>
+            </div>
+            <div className="col-md-6 d-flex justify-content-center">
+              <div className="art-card">
+                <img src={ab} alt="Abstract textured painting" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="split reveal mt-5">
+          <div className="row align-items-center gx-5">
+            <div className="col-lg-6 order-lg-1">
+              <div className="art-card alt">
+                <img src={abme} alt="Artist portrait" loading="lazy" />
+              </div>
+            </div>
+            <div className="col-lg-6 order-lg-2">
+              <h2 className="fw-semibold">More Than a Signature</h2>
+              <p className="text-muted">
+                My work merges traditional Indian motifs with contemporary texture work — thoughtful layers, color harmonies, and tactile surfaces that invite closer viewing.
+              </p>
+              <ul className="list-unstyled text-muted">
+                <li>• Textured mixed-media pieces</li>
+                <li>• Commissions & framed walls</li>
+                <li>• Shipping & display guidance</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   )
 }

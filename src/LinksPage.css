@@ -1,0 +1,138 @@
+/* modern, compact link list with glass card + gradient buttons */
+
+:root{
+  --bg: linear-gradient(180deg, #f7fafc 0%, #f1f5f9 100%);
+  --card-bg: rgba(255,255,255,0.7);
+  --glass-blur: 8px;
+  --shadow: 0 10px 30px rgba(2,6,23,0.06);
+  --muted: #6b7280;
+  --accent: #708238; /* olive accent if needed */
+}
+
+.links-root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.links-card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.links-header {
+  text-align: center;
+}
+
+.links-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+}
+
+.links-sub {
+  margin: 6px 0 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 38ch;
+}
+
+/* list layout */
+.links-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+/* each button row */
+.links-item {
+  display: block;
+}
+
+/* button */
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  width: 100%;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+/* icon circle on left (subtle glass) */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 10px;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  background: rgba(0,0,0,0.12);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 -2px 6px rgba(0,0,0,0.08);
+}
+
+/* allow text to wrap nicely */
+.btn-text {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+/* hover / focus */
+.link-btn:hover,
+.link-btn:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(2,6,23,0.12);
+  filter: saturate(1.05);
+  outline: none;
+}
+
+.link-btn:focus-visible {
+  outline: 3px solid rgba(112,130,56,0.15);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* footer */
+.links-footer {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* responsive tweaks */
+@media (max-width: 480px) {
+  .links-card { padding: 20px; border-radius: 12px; }
+  .btn-icon { width: 36px; height: 36px; min-width:36px; min-height:36px; }
+  .link-btn { padding: 10px 12px; font-size: 0.95rem; }
+}

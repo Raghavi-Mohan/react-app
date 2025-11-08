@@ -1,0 +1,64 @@
+:root{
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 8px 30px rgba(18, 25, 40, 0.08);
+  --accent: #6f42c1; /* adjust to brand color */;
+  --bg-grad: linear-gradient(180deg, #f6f8ef 0%, #eef2e0 100%); /* light pastel olive background */
+
+}
+
+.about-page {
+  background: var(--bg-grad);
+  min-height: 100vh;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.2,.9,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Art card styling */
+.art-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.65), rgba(250,250,255,0.6));
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  max-width: 520px;
+  overflow: hidden;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.art-card img {
+  display: block;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.art-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(18,25,40,0.12);
+}
+
+/* alternate card — slightly different crop */
+.art-card.alt img {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* Typography tweaks */
+.lead { color: #4b5563; }
+h1, h2 { color: #111827; }
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .art-card img { height: 240px; }
+  .art-card.alt img { height: 260px; }
+  .container { padding-left: 1rem; padding-right: 1rem; }
+}

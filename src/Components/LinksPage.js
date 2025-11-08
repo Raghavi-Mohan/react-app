@@ -1,4 +1,6 @@
+// ...existing code...
 import React from "react";
+import '../LinksPage.css';
 
 const LinksPage = () => {
   const links = [
@@ -35,81 +37,38 @@ const LinksPage = () => {
   ];
 
   return (
-    <div style={styles.container}>
-      <div style={styles.box}>
-        <h1 style={styles.heading}>Connect With Me</h1>
-        <ul style={styles.list}>
+    <div className="links-root">
+      <div className="links-card">
+        <header className="links-header">
+          <h1 className="links-title">Connect with me</h1>
+          <p className="links-sub">Follow, support or explore — I share new work and studio updates here.</p>
+        </header>
+
+        <ul className="links-list" role="list">
           {links.map((link, index) => (
-            <li key={index} style={styles.listItem}>
+            <li key={index} className="links-item">
               <a
+                className="link-btn"
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  ...styles.link,
-                  background: link.color,
-                  color: link.textColor,
-                }}
+                style={{ background: link.color, color: link.textColor }}
+                aria-label={`Open ${link.name} in a new tab`}
               >
-                {link.name}
+                <span className="btn-icon" aria-hidden>{link.name.charAt(0)}</span>
+                <span className="btn-text">{link.name}</span>
               </a>
             </li>
           ))}
         </ul>
+
+        <footer className="links-footer">
+          <small>Thanks for visiting — orders, commissions and collaborations welcome.</small>
+        </footer>
       </div>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    background: "#f7f7f8",
-    margin: 0,
-    padding: "20px",
-  },
-  box: {
-    textAlign: "center",
-    background: "#fff",
-    padding: "40px 30px",
-    borderRadius: "16px",
-    boxShadow: "0 6px 20px rgba(0,0,0,0.08)",
-    width: "100%",
-    maxWidth: "420px",
-  },
-  heading: {
-    marginBottom: "24px",
-    fontSize: "26px",
-    fontWeight: "700",
-    color: "#111",
-  },
-  list: {
-    listStyle: "none",
-    padding: 0,
-    margin: 0,
-  },
-  listItem: {
-    margin: "12px 0",
-  },
-  link: {
-    textDecoration: "none",
-    fontSize: "18px",
-    fontWeight: "600",
-    borderRadius: "12px",
-    display: "inline-block",
-    width: "80%",
-    padding: "14px 0",
-    transition: "transform 0.2s ease, box-shadow 0.2s ease",
-  },
-};
-
-// subtle hover effect
-styles.linkHover = {
-  transform: "translateY(-2px)",
-  boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
-};
-
 export default LinksPage;
+// ...existing code...
