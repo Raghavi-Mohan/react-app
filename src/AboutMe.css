@@ -58,7 +58,7 @@ h1, h2 { color: #111827; }
 
 /* Responsive tweaks */
 @media (max-width: 767px) {
-  .art-card img { height: 240px; }
+  .art-card img { height: 270px; }
   .art-card.alt img { height: 260px; }
   .container { padding-left: 1rem; padding-right: 1rem; }
 }
