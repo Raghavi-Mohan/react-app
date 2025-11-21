@@ -81,8 +81,7 @@ export default function Home() {
                   </div>
                 </article>
               </div>
-
-              <div className="col-lg-4 d-none d-lg-block">
+                <div className="col-12 col-md-6 col-lg-4 order-3">
                 <article className="feature-card promo">
                   <div className="promo-content">
                     <h3 className="card-title">Commissions & Framing</h3>
