@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.2fa5640c.css",
-    "main.js": "/react-app/static/js/main.a003eca7.js",
+    "main.css": "/react-app/static/css/main.6589103b.css",
+    "main.js": "/react-app/static/js/main.67594448.js",
     "static/js/453.fc43a62c.chunk.js": "/react-app/static/js/453.fc43a62c.chunk.js",
     "static/media/Window to Spring.jpg": "/react-app/static/media/Window to Spring.32f3becb027d574df25f.jpg",
     "static/media/charms_2.png": "/react-app/static/media/charms_2.39e5cfd85117c58fe08c.png",
@@ -178,12 +178,12 @@
     "static/media/slick.ttf": "/react-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/react-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/react-app/index.html",
-    "main.2fa5640c.css.map": "/react-app/static/css/main.2fa5640c.css.map",
-    "main.a003eca7.js.map": "/react-app/static/js/main.a003eca7.js.map",
+    "main.6589103b.css.map": "/react-app/static/css/main.6589103b.css.map",
+    "main.67594448.js.map": "/react-app/static/js/main.67594448.js.map",
     "453.fc43a62c.chunk.js.map": "/react-app/static/js/453.fc43a62c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fa5640c.css",
-    "static/js/main.a003eca7.js"
+    "static/css/main.6589103b.css",
+    "static/js/main.67594448.js"
   ]
 }
