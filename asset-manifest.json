@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.6589103b.css",
-    "main.js": "/react-app/static/js/main.67594448.js",
+    "main.css": "/react-app/static/css/main.7046d6ed.css",
+    "main.js": "/react-app/static/js/main.40feb488.js",
     "static/js/453.fc43a62c.chunk.js": "/react-app/static/js/453.fc43a62c.chunk.js",
     "static/media/Window to Spring.jpg": "/react-app/static/media/Window to Spring.32f3becb027d574df25f.jpg",
     "static/media/charms_2.png": "/react-app/static/media/charms_2.39e5cfd85117c58fe08c.png",
@@ -10,9 +10,11 @@
     "static/media/Window to Spring_2.jpg": "/react-app/static/media/Window to Spring_2.6044f5fd87c2559109c9.jpg",
     "static/media/Window to Spring_1.jpg": "/react-app/static/media/Window to Spring_1.759a3b73b8c5fa5ac75a.jpg",
     "static/media/Heritage in Hue_1.png": "/react-app/static/media/Heritage in Hue_1.bfdf0aa039f8f16f00b9.png",
+    "static/media/TexturedPeacock_12x16.png": "/react-app/static/media/TexturedPeacock_12x16.924666e26c74099348b8.png",
     "static/media/Velvet Jewel_8\".png": "/react-app/static/media/Velvet Jewel_8\".f938b78c778e31230df8.png",
     "static/media/M_11.png": "/react-app/static/media/M_11.e753731068aca4d476ef.png",
     "static/media/Roots of Gold_2.png": "/react-app/static/media/Roots of Gold_2.7618209f6102f29872de.png",
+    "static/media/RoyalElephant_11x14.png": "/react-app/static/media/RoyalElephant_11x14.a0ec4ba56fe501cfb4a7.png",
     "static/media/Beyond Threshold_3.png": "/react-app/static/media/Beyond Threshold_3.25e041325584adc5f735.png",
     "static/media/Beyond Threshold_2.png": "/react-app/static/media/Beyond Threshold_2.64c620fcacfe2ae66f66.png",
     "static/media/Regal Silence_1.png": "/react-app/static/media/Regal Silence_1.bc2b699d708a898f5e1a.png",
@@ -65,6 +67,7 @@
     "static/media/M_15.png": "/react-app/static/media/M_15.6fe203c4bbacfe4c6bfc.png",
     "static/media/C_4.png": "/react-app/static/media/C_4.f15721c1d9fabd89d0b7.png",
     "static/media/Royal Reflection_12x16.png": "/react-app/static/media/Royal Reflection_12x16.03461f65722c9cf14db2.png",
+    "static/media/TanjorePeacock_11x14.png": "/react-app/static/media/TanjorePeacock_11x14.0742f3ef0967a71d86b2.png",
     "static/media/Elegance in Flight_8x10.png": "/react-app/static/media/Elegance in Flight_8x10.725557e8833f0655e53b.png",
     "static/media/Heirloom Elegance.png": "/react-app/static/media/Heirloom Elegance.c6553910303f42db3018.png",
     "static/media/Heirloom Elegance_8\".png": "/react-app/static/media/Heirloom Elegance_8\".c6553910303f42db3018.png",
@@ -79,6 +82,7 @@
     "static/media/M_20.png": "/react-app/static/media/M_20.252c0ee87550686e449f.png",
     "static/media/Wave of Time_8\".png": "/react-app/static/media/Wave of Time_8\".893368171653e2809b76.png",
     "static/media/Peacock Bloom_36x28.png": "/react-app/static/media/Peacock Bloom_36x28.265452eff6295ca1a28a.png",
+    "static/media/Annapakshi_11x14.png": "/react-app/static/media/Annapakshi_11x14.c493dd318956884d9c57.png",
     "static/media/M_14.png": "/react-app/static/media/M_14.f77c59677616a5fa73b4.png",
     "static/media/M_23.png": "/react-app/static/media/M_23.b4be33ccc0fa0ab379d4.png",
     "static/media/M_24.png": "/react-app/static/media/M_24.e37fd108cc311204be75.png",
@@ -136,12 +140,14 @@
     "static/media/Whispers in Balance.png": "/react-app/static/media/Whispers in Balance.8d27c79a05ba1bd65913.png",
     "static/media/Whispers in Balance_12x16.png": "/react-app/static/media/Whispers in Balance_12x16.8d27c79a05ba1bd65913.png",
     "static/media/The Playful Divine_18\".png": "/react-app/static/media/The Playful Divine_18\".3dd04fd54461ceb8ce0c.png",
+    "static/media/MiniCanvas_4x4.jpg": "/react-app/static/media/MiniCanvas_4x4.ce4039bfc49d60b0f6a8.jpg",
     "static/media/charms_8.jpg": "/react-app/static/media/charms_8.ae6bc94b502a05c0b71c.jpg",
     "static/media/image-not-found.png": "/react-app/static/media/image-not-found.1ac8fce36abfb63864de.png",
     "static/media/charms_9.jpg": "/react-app/static/media/charms_9.b1b0e512379ccb20f619.jpg",
     "static/media/charms_1.png": "/react-app/static/media/charms_1.517781f90e9f7cbacb53.png",
     "static/media/my.png": "/react-app/static/media/my.c199f66b48cda41177d5.png",
     "static/media/my_2.png": "/react-app/static/media/my_2.0521bd5588588c5720ce.png",
+    "static/media/GoldenPrinces_11x14.jpg": "/react-app/static/media/GoldenPrinces_11x14.dfc53ec2b9e32be32764.jpg",
     "static/media/Grace in Silence.png": "/react-app/static/media/Grace in Silence.9100cb03f0372cad2b74.png",
     "static/media/Grace in Silence_20x20.png": "/react-app/static/media/Grace in Silence_20x20.9100cb03f0372cad2b74.png",
     "static/media/T_ALL_1.png": "/react-app/static/media/T_ALL_1.338c3131f6a61469dd9d.png",
@@ -178,12 +184,12 @@
     "static/media/slick.ttf": "/react-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/react-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/react-app/index.html",
-    "main.6589103b.css.map": "/react-app/static/css/main.6589103b.css.map",
-    "main.67594448.js.map": "/react-app/static/js/main.67594448.js.map",
+    "main.7046d6ed.css.map": "/react-app/static/css/main.7046d6ed.css.map",
+    "main.40feb488.js.map": "/react-app/static/js/main.40feb488.js.map",
     "453.fc43a62c.chunk.js.map": "/react-app/static/js/453.fc43a62c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6589103b.css",
-    "static/js/main.67594448.js"
+    "static/css/main.7046d6ed.css",
+    "static/js/main.40feb488.js"
   ]
 }
