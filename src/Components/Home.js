@@ -9,6 +9,7 @@ import me from '../Asset/my.png'
 import B_ALL_1 from '../Asset/B_ALL_1.png'
 import ALL_3 from '../Asset/C_ALL_1.png'
 import '../Home.css'
+import ArtGuide from './ArtGuide';
 // ...existing code...
 
 export default function Home() {
@@ -81,7 +82,7 @@ export default function Home() {
                   </div>
                 </article>
               </div>
-                <div className="col-12 col-md-6 col-lg-4 order-3">
+              <div className="col-12 col-md-6 col-lg-4 order-3">
                 <article className="feature-card promo">
                   <div className="promo-content">
                     <h3 className="card-title">Commissions & Framing</h3>
@@ -117,6 +118,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* AI ART GUIDE */}
+        {/*<section className="reveal">
+          <div className="container mt-5 mb-5">
+            <ArtGuide />
+          </div>
+        </section>*/}
+
       </main>
 
       <Footer />

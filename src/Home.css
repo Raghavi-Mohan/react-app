@@ -116,3 +116,38 @@
 /* Small / large variants inherit */
 .btn-sm.btn-primary,
 .btn-lg.btn-primary { color: var(--olive-contrast) !important; }
+
+.art-guide-container {
+  background: #faf6f2;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.guide-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.guide-form label {
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.guide-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.guide-result {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  border-left: 4px solid #915d47;
+}

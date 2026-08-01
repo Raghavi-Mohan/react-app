@@ -11,6 +11,7 @@ import GalleryPage from './Components/GalleryModal'
 import LinksPage from './Components/LinksPage';   
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ArtGuideWidget from "./Components/ArtGuideWidget";
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/crafts" element={<Craft />} />
           <Route path="/links" element={<LinksPage />} />
         </Routes>
+        <ArtGuideWidget />
     </div>
   );
 }

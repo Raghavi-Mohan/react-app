@@ -3,10 +3,11 @@ Digitally reproduced using archival pigments on cotton rag, canvas panel, or sat
 Art prints are flat and do not include the original textures, which are present only in the original artwork.
 Both original artworks and fine art prints are available on enquiry.
 Mockup is for display purposes only and not to scale.`;
-const MaterialOptions=`Canvas roll, Canvas Panels + Framed, Canvas Stretched + Framed (DM for Size and Price)`;
-const KeychianMaterialOptions=`Clay keychains (comes with a charm), Additional charms available to add(each additional charms add 0.50 cents)`
-const MagnetMaterialOptions=`Made with wooden panels with acrylic texture medium and glazed for protection`
-const BookmarkMaterialOptions=`Made with wooden panels with acrylic texture medium and glazed for protection`
+const MaterialOptions=`Canvas roll, Canvas Panels + Framed, Canvas Stretched + Framed (DM for more details)`;
+const KeychianMaterialOptions=`Clay keychains (comes with a charm), Additional charms available to add (DM for more details)`
+const MagnetMaterialOptions=`Made with wooden panels with acrylic texture medium and glazed for protection (DM for more details)`
+const BookmarkMaterialOptions=`Made with wooden panels with acrylic texture medium and glazed for protection (DM for more details)`
+const TanjorePaintingOptions=`Canvas Panels + Framed, Gemstone - White/Red/Green, Golden/Silver foil (DM for more details)`;
 const descCrafts=`Handcrafted clay keychains, textured fridge magnets, and wooden bookmarks—all made with love and creativity. 
 Each piece is crafted using materials like air-dry clay, wood, and textured acrylic paints. 
 Fully customizable with names, colors, or themes, they make for unique, personal keepsakes or gifts.
@@ -35,7 +36,7 @@ function safeRequire(path) {
   try {
     return require(`../Asset/images/${path}`);
   } catch (e) {
-    console.log('Image not found, using default image');
+    //console.log('Image not found, using default image');
     return require('../Asset/images/image-not-found.png');
   }
 }
@@ -494,6 +495,54 @@ The interior mockup is for display purposes only and is not to scale.`
         ],
         description: desc
     },
+    {
+        id: 39,
+        title: 'MiniCanvas',
+        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
+        options:MaterialOptions,
+        slider: [],
+        description: desc
+    },
+    {
+        id: 40,
+        title: 'Annapakshi',
+        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
+        options:TanjorePaintingOptions,
+        slider: [],
+        description: desc
+    },
+     {
+        id: 41,
+        title: 'TanjorePeacock',
+        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
+        options:TanjorePaintingOptions,
+        slider: [],
+        description: desc
+    },
+     {
+        id: 42,
+        title: 'RoyalElephant',
+        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
+        options:TanjorePaintingOptions,
+        slider: [],
+        description: desc
+    },
+    {
+        id: 43,
+        title: 'TexturedPeacock',
+        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
+        options:MaterialOptions,
+        slider: [],
+        description: desc
+    },
+    {
+        id: 44,
+        title: 'GoldenPrinces',
+        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
+        options:TanjorePaintingOptions,
+        slider: [],
+        description: desc
+    }
 ];
 
 export default paintings;
