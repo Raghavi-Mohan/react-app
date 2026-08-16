@@ -15,6 +15,7 @@ export default function Craft() {
   const MagnetItems = importAll(require.context('../Asset/magnets', false, /\.(png|jpe?g|svg)$/));
   const keyChainItems = importAll(require.context('../Asset/keyChains', false, /\.(png|jpe?g|svg)$/));
   const bookItems = importAll(require.context('../Asset/bookMarks', false, /\.(png|jpe?g|svg)$/));
+  const shellItems = importAll(require.context('../Asset/shellTrinketDish', false, /\.(png|jpe?g|svg)$/));
 
   return (
     <div>
@@ -51,6 +52,17 @@ export default function Craft() {
           <figure key={index} className="text-center stylish-caption">
             <figcaption className="mt-2">{`Story Stems # ${index + 1}`}</figcaption>
             <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
+            <figcaption className="mt-2"></figcaption>
+          </figure>
+        </ProductsCard>
+      ))}
+      <hr className="w-75 bg-dark mx-auto" />
+      <Headings heading="A shell reimagined.. - Shell Trinket Dish" />
+      {shellItems.map((imgSrc, index) => (
+        <ProductsCard key={index} paintingId={`ShellTrinketDish`}>
+          <figure key={index} className="text-center stylish-caption">
+            <figcaption className="mt-2">{`Shell Trinket Dish # ${index + 1}`}</figcaption>
+            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="Shell Trinket Dish"></img>
             <figcaption className="mt-2"></figcaption>
           </figure>
         </ProductsCard>

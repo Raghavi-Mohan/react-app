@@ -6,9 +6,9 @@ Mockup is for display purposes only and not to scale.`;
 const MaterialOptions=`Canvas roll, Canvas Panels + Framed, Canvas Stretched + Framed (DM for more details)`;
 const KeychianMaterialOptions=`Clay keychains (comes with a charm), Additional charms available to add (DM for more details)`
 const MagnetMaterialOptions=`Made with wooden panels with acrylic texture medium and glazed for protection (DM for more details)`
-const BookmarkMaterialOptions=`Made with wooden panels with acrylic texture medium and glazed for protection (DM for more details)`
+const BookmarkMaterialOptions=`Made with wooden panels/acrylic panels with acrylic texture medium and glazed for protection (DM for more details)`
 const TanjorePaintingOptions=`Canvas Panels + Framed, Gemstone - White/Red/Green, Golden/Silver foil (DM for more details)`;
-const descCrafts=`Handcrafted clay keychains, textured fridge magnets, and wooden bookmarks—all made with love and creativity. 
+const descCrafts=`Handcrafted clay keychains, textured fridge magnets, and wooden/acrylic bookmarks—all made with love and creativity. 
 Each piece is crafted using materials like air-dry clay, wood, and textured acrylic paints. 
 Fully customizable with names, colors, or themes, they make for unique, personal keepsakes or gifts.
 Mockup is for display purposes only and not to scale.`;
@@ -474,9 +474,19 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Pre-order: Customizable BookMarks',
         options:BookmarkMaterialOptions,
         slider: [
-            safeRequire('storyStems.png'),
-            safeRequire('storyStems_3.png'),
-            safeRequire('storyStems_2.png')
+            require('../Asset/bookMarks/B_1.png'),
+            require('../Asset/bookMarks/B_7.jpg'),
+            require('../Asset/bookMarks/B_8.jpg'),
+            require('../Asset/bookMarks/B_9.jpg'),
+            require('../Asset/bookMarks/B_10.jpg'),
+            require('../Asset/bookMarks/B_11.jpg'),
+            require('../Asset/bookMarks/B_12.jpg'),
+            require('../Asset/bookMarks/B_13.jpg'),
+            require('../Asset/bookMarks/B_14.jpg'),
+            require('../Asset/bookMarks/B_15.jpg'),
+            require('../Asset/bookMarks/B_16.jpg'),
+            require('../Asset/bookMarks/B_17.jpg'),
+            require('../Asset/bookMarks/B_18.jpg')
 
         ],
         description: descCrafts
@@ -508,7 +518,10 @@ The interior mockup is for display purposes only and is not to scale.`
         title: 'Annapakshi',
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
-        slider: [],
+        slider: [
+            safeRequire('Annapakshi.jpg'),
+            safeRequire('Annapakshi_1.jpg')
+        ],
         description: desc
     },
      {
@@ -516,7 +529,10 @@ The interior mockup is for display purposes only and is not to scale.`
         title: 'TanjorePeacock',
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
-        slider: [],
+        slider: [
+            safeRequire('TanjorePeacock.jpg'),
+            safeRequire('TanjorePeacock_1.jpg')
+        ],
         description: desc
     },
      {
@@ -524,7 +540,10 @@ The interior mockup is for display purposes only and is not to scale.`
         title: 'RoyalElephant',
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
-        slider: [],
+        slider: [
+            safeRequire('RoyalElephant.jpg'),
+            safeRequire('RoyalElephant_1.jpg')
+        ],
         description: desc
     },
     {
@@ -532,7 +551,10 @@ The interior mockup is for display purposes only and is not to scale.`
         title: 'TexturedPeacock',
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
-        slider: [],
+        slider: [
+            safeRequire('TexturedPeacock.jpg'),
+            safeRequire('TexturedPeacock_1.jpg')
+        ],
         description: desc
     },
     {
@@ -540,8 +562,25 @@ The interior mockup is for display purposes only and is not to scale.`
         title: 'GoldenPrinces',
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
-        slider: [],
+         slider: [
+            safeRequire('GoldenPrinces.jpg'),
+            safeRequire('GoldenPrinces_1.jpg')
+        ],
         description: desc
+    },
+    {
+        id: 45,
+        title: 'ShellTrinketDish',
+        availablity: 'Pre-order: Handcrafted shell trinket dish',
+        options: 'Shell finish(Original shell/Replica with clay), hand-painted details, decoupage accents, and a protective glaze (DM for more details)',
+        slider: [
+            require('../Asset/shellTrinketDish/STT_1.jpg'),
+            require('../Asset/shellTrinketDish/STT_2.jpg'),
+            require('../Asset/shellTrinketDish/STT_3.jpg'),
+            require('../Asset/shellTrinketDish/STT_4.jpg'),
+            require('../Asset/shellTrinketDish/STT_5.jpg')
+        ],
+        description: 'A shell reimagined as a trinket dish—handcrafted, decorative, and practical.'
     }
 ];
 

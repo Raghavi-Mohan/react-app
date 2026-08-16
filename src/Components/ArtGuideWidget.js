@@ -39,9 +39,9 @@ export default function ArtGuideWidget() {
 
       const getArt = httpsCallable('getArtRecommendations');
       const result = await getArt({ input });
-      //const sug = "◆ Recommended Style : Texture Art\n\n◆ Suggested Colors : Yellow and Blue\n\n◆ Best Product Option : FridgeMagnets\n\n◆ Why This Works :\n\nTexture Art is a modern and contemporary style that will add a unique touch to the return gifts.\n\nThe minion theme will be appreciated by children and adults alike, making it perfect for birthday return gifts.\n\nThe yellow and blue colors will perfectly capture the essence of the minions.\n\nFridge magnets are a practical and affordable option within your price range.\n\n◆ Customization Ideas :\n\nYou can customize the magnets with the names or initials of the recipients for a personal touch";
-      const processed = applyProductLink(result.data.suggestions);
-      //const processed = applyProductLink(sug);
+      const sug = "◆ AI suggestions are coming soon";
+      //const processed = applyProductLink(result.data.suggestions);
+      const processed = applyProductLink(sug);
       setResult(processed);
       setLoading(false);
       console.log("Cost of this call : " + result.data.cost);
@@ -130,7 +130,7 @@ export default function ArtGuideWidget() {
       {/* Sidebar Panel */}
       <div className={`ai-sidebar ${open ? "open" : ""}`}>
         <div className="ai-sidebar-header">
-          <h3>Smart Art Guide</h3>
+          <h3>Smart Art Guide - Coming Soon</h3>
           <button onClick={() => {
             resetState();
             setOpen(false);
