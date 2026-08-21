@@ -1,73 +1,189 @@
 import React from 'react'
+import { useParams, Navigate } from 'react-router-dom';
+
 import Header from './Header';
 import Headings from './Headings';
 import ProductsCard from './ProductsCard';
 import Footer from './Footer';
 
 
-
-
 export default function Craft() {
-  //const MagnetItems = [M_1, M_2,M_3,M_4,M_5, M_6,M_7,M_8,M_9,M_10]; // or fetched from API, etc.
-  //const keyChainItems = [C_1, C_2,C_3,C_4]; // or fetched from API, etc.
-  //const bookItems = [B_1, B_2,B_3,B_4,B_5,B_6]; // or fetched from API, etc.
-  const importAll = (requireContext) => requireContext.keys().map(requireContext);
-  const MagnetItems = importAll(require.context('../Asset/magnets', false, /\.(png|jpe?g|svg)$/));
-  const keyChainItems = importAll(require.context('../Asset/keyChains', false, /\.(png|jpe?g|svg)$/));
-  const bookItems = importAll(require.context('../Asset/bookMarks', false, /\.(png|jpe?g|svg)$/));
-  const shellItems = importAll(require.context('../Asset/shellTrinketDish', false, /\.(png|jpe?g|svg)$/));
+
+  // Get category from URL
+  // Example:
+  // /crafts/magnets
+  // /crafts/charms
+  // /crafts/bookmarks
+  // /crafts/shells
+
+  const { category } = useParams();
+
+
+  // Import all images from each craft folder
+
+  const importAll = (requireContext) =>
+    requireContext.keys().map(requireContext);
+
+
+  const MagnetItems = importAll(
+    require.context(
+      '../Asset/magnets',
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
+
+
+  const keyChainItems = importAll(
+    require.context(
+      '../Asset/keyChains',
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
+
+
+  const bookItems = importAll(
+    require.context(
+      '../Asset/bookMarks',
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
+
+
+  const shellItems = importAll(
+    require.context(
+      '../Asset/shellTrinketDish',
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
+
+
+  // Define each craft category
+
+  const craftCategories = {
+
+    charms: {
+      items: keyChainItems,
+      heading: "Tiny Sculptures That Travel with You - Charms",
+      caption: "Charms",
+      paintingId: "Charms"
+    },
+
+    bookmarks: {
+      items: bookItems,
+      heading: "Textured Tales for Every Page - BookMarks",
+      caption: "Story Stems",
+      paintingId: "StoryStems"
+    },
+
+    magnets: {
+      items: MagnetItems,
+      heading: "Stick a Little Story to Your Space - Fridge Magnets",
+      caption: "Minis",
+      paintingId: "Minis"
+    },
+
+    shells: {
+      items: shellItems,
+      heading: "A Shell Reimagined.. - Shell Trinket Dish",
+      caption: "Shell Trinket Dish",
+      paintingId: "ShellTrinketDish"
+    }
+
+  };
+
+
+  /*
+   * If someone goes to:
+   * /crafts
+   *
+   * send them to the Magnets page.
+   */
+
+  if (!category) {
+    return <Navigate to="/crafts/magnets" replace />;
+  }
+
+
+  /*
+   * Find the selected category
+   */
+
+  const selectedCategory =
+    craftCategories[category.toLowerCase()];
+
+
+  /*
+   * If someone enters an invalid URL such as:
+   *
+   * /crafts/abc
+   *
+   * send them to Magnets.
+   */
+
+  if (!selectedCategory) {
+    return <Navigate to="/crafts/magnets" replace />;
+  }
+
 
   return (
-    <div>
-      <Header />
-      <Headings heading="Stick a Little Story to Your Space - Fridge Magnets" />
-      <hr className="w-75 bg-dark mx-auto" />
-      {MagnetItems.map((imgSrc, index) => (
-        //<ProductsCard key={index} topic={`Minis : ${index + 1}`}>
-        //<ProductsCard key={index} paintingId={`Minis ${index + 1}`}>
-                <ProductsCard key={index} paintingId={`Minis`}>
-          <figure key={index} className="text-center stylish-caption">
-            <figcaption className="mt-2">{`Minis # ${index + 1}`}</figcaption>
-            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
-            <figcaption className="mt-2"></figcaption>
-          </figure>
-        </ProductsCard>
-      ))}
-      <hr className="w-75 bg-dark mx-auto" />
-      <Headings heading="Tiny Sculptures That Travel with You - Key Chains" />
+    <div className="craft-page">
 
-      {keyChainItems.map((imgSrc, index) => (
-        <ProductsCard key={index} paintingId={`Charms`}>
-          <figure key={index} className="text-center stylish-caption">
-            <figcaption className="mt-2">{`Charms # ${index + 1}`}</figcaption>
-            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
-            <figcaption className="mt-2"></figcaption>
-          </figure>
-        </ProductsCard>
-      ))}
-      <hr className="w-75 bg-dark mx-auto" />
-      <Headings heading="Textured Tales for Every Page - BookMarks" />
-      {bookItems.map((imgSrc, index) => (
-        <ProductsCard key={index} paintingId={`StoryStems`}>
-          <figure key={index} className="text-center stylish-caption">
-            <figcaption className="mt-2">{`Story Stems # ${index + 1}`}</figcaption>
-            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="icon"></img>
-            <figcaption className="mt-2"></figcaption>
-          </figure>
-        </ProductsCard>
-      ))}
-      <hr className="w-75 bg-dark mx-auto" />
-      <Headings heading="A shell reimagined.. - Shell Trinket Dish" />
-      {shellItems.map((imgSrc, index) => (
-        <ProductsCard key={index} paintingId={`ShellTrinketDish`}>
-          <figure key={index} className="text-center stylish-caption">
-            <figcaption className="mt-2">{`Shell Trinket Dish # ${index + 1}`}</figcaption>
-            <img className="w-75 h-75 img-fluid" src={imgSrc} alt="Shell Trinket Dish"></img>
-            <figcaption className="mt-2"></figcaption>
-          </figure>
-        </ProductsCard>
-      ))}
+      <Header />
+
+
+      <main className="craft-content">
+
+        {/* CATEGORY HEADING */}
+
+        <Headings
+          heading={selectedCategory.heading}
+        />
+
+        <hr className="w-75 bg-dark mx-auto" />
+
+
+        {/* SELECTED CATEGORY ITEMS */}
+
+        <section className="craft-items">
+
+          {selectedCategory.items.map((imgSrc, index) => (
+
+            <ProductsCard
+              key={index}
+              paintingId={selectedCategory.paintingId}
+            >
+
+              <figure className="text-center stylish-caption">
+
+                <figcaption className="mt-2">
+                  {`${selectedCategory.caption} # ${index + 1}`}
+                </figcaption>
+
+                <img
+                  className="w-75 h-75 img-fluid"
+                  src={imgSrc}
+                  alt={`${selectedCategory.caption} ${index + 1}`}
+                />
+
+                <figcaption className="mt-2"></figcaption>
+
+              </figure>
+
+            </ProductsCard>
+
+          ))}
+
+        </section>
+
+      </main>
+
+
       <Footer />
+
     </div>
   )
 }

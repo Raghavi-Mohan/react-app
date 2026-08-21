@@ -3,8 +3,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header';
 import Footer from './Footer';
-import T_ALL_1 from '../Asset/T_ALL_1.png'
-import ALL_2 from '../Asset/ALL_2.png'
+import T_ALL_1 from '../Asset/T_ALL_1.jpg'
+import ALL_2 from '../Asset/ALL_2.jpg'
+import ALL_4 from '../Asset/ALL_3.jpg'
 import me from '../Asset/my.png'
 import B_ALL_1 from '../Asset/B_ALL_1.png'
 import ALL_3 from '../Asset/C_ALL_1.png'
@@ -41,7 +42,7 @@ export default function Home() {
                 <p className="hero-sub">Original abstract paintings and handcrafted mini-treasures made with layered textures and color harmonies.</p>
                 <div className="hero-ctas">
                   <a href="#/products" className="btn btn-primary btn-lg me-2">View Studio</a>
-                  <Link to="/gallery" className="btn btn-outline-dark btn-lg">Browse Works</Link>
+                  <Link to="/gallery" className="btn btn-outline-dark btn-lg">Visit Gallery</Link>
                 </div>
               </div>
               <div className="col-lg-6 d-flex justify-content-center">
@@ -107,7 +108,7 @@ export default function Home() {
               </div>
               <div className="col-6 col-sm-4 col-md-3">
                 <div className="thumb">
-                  <img src={ALL_2} alt="" loading="lazy" />
+                  <img src={ALL_4} alt="" loading="lazy" />
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
