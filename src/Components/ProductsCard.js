@@ -1,20 +1,53 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export default function ProductsCard({ children,paintingId }) {
-
+export default function ProductsCard({ children, paintingId }) {
   const navigate = useNavigate();
-    return (
-        <Fragment>
-            <div className="Mycard w-25 d-inline-block" 
-            onClick={() => navigate(`/painting/${paintingId}`)} style={{ cursor: 'pointer' }}>
-                <div className="Mycard-body zoom-hover">
-                    {children}
-                </div>
-               {/*} <div className="Mycard-footer text-start">
-                <h6 className="font-adjust">{size}</h6>                
-                </div>*/}
-            </div>
-        </Fragment>
-    )
+  const [isPressed, setIsPressed] = useState(false);
+  const [inView, setInView] = useState(false);
+  const cardRef = useRef(null);
+
+  const goToPainting = () => navigate(`/painting/${paintingId}`);
+
+  const handleClick = () => {
+    setIsPressed(true);
+    setTimeout(goToPainting, 150);
+  };
+
+  // On touch devices (no real hover), give cards a "hover-like" lift
+  // as they scroll through the middle of the viewport.
+  useEffect(() => {
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+    if (!isTouchDevice || !cardRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.6 } // card is "in view" once 60% visible, roughly center-screen
+    );
+
+    observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const classNames = [
+    'gallery-card',
+    isPressed ? 'is-pressed' : '',
+    inView ? 'in-view' : ''
+  ].filter(Boolean).join(' ');
+
+  return (
+    <Fragment>
+      <div
+        ref={cardRef}
+        className={classNames}
+        onClick={handleClick}
+        onTouchStart={() => setIsPressed(true)}
+        onTouchEnd={() => setIsPressed(false)}
+      >
+        <div className="gallery-frame">
+          {children}
+        </div>
+      </div>
+    </Fragment>
+  )
 }

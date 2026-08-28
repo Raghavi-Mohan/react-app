@@ -9,7 +9,7 @@ const PaintingDescription = ({ description }) => {
   // Split description into sentences
   const sentences = description.split(/(?<=\.)\s+/); // splits after each period
 
-  const toggleExpanded = () => setExpanded(!expanded);
+  const toggleExpanded = () => setExpanded((previousExpanded) => !previousExpanded);
 
   const visibleSentences = expanded
     ? sentences
@@ -18,24 +18,21 @@ const PaintingDescription = ({ description }) => {
   return (
     <div>
       {visibleSentences.map((sentence, index) => (
-        <p key={index}  className="description" style={{ lineHeight: '1.5' }}>
+        <p key={index} className="painting-description">
           {sentence.trim()}
         </p>
       ))}
 
       {sentences.length > previewSentenceCount && (
         <button
+            type="button"
           onClick={toggleExpanded}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#000',
-            cursor: 'pointer',
-            padding: 0,
-            fontSize: '1em',
-          }}
+          className="painting-description-toggle"
+            aria-label={expanded ? 'Collapse description' : 'Expand description'}
+            aria-expanded={expanded}
         >
           {expanded ? <FaChevronUp /> : <FaChevronDown />}
+          <span>{expanded ? 'Less' : 'More'}</span>
         </button>
       )}
     </div>

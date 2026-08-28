@@ -1,0 +1,583 @@
+/* =========================================================
+   NAVIGATION LOADING OVERLAY
+   ========================================================= */
+
+.navigation-loading-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  /*
+     Semi-transparent layer.
+     The page underneath remains visible.
+  */
+
+  background: rgba(255, 253, 248, 0.40);
+
+  /*
+     Modern glass effect.
+  */
+
+  backdrop-filter: blur(5px);
+
+  -webkit-backdrop-filter: blur(5px);
+
+  animation:
+    navigationOverlayIn 0.2s ease-out;
+}
+
+
+/* =========================================================
+   LOADING CARD
+   ========================================================= */
+
+.navigation-loading-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 26px 34px 28px;
+
+  min-width: 275px;
+
+  border-radius: 24px;
+
+  /*
+     Slightly opaque card so the logo/message
+     remains easy to read.
+  */
+
+  background:
+    rgba(255, 253, 248, 0.88);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 18px 45px rgba(73, 63, 45, 0.15),
+    0 4px 12px rgba(73, 63, 45, 0.07);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  animation:
+    loadingCardIn 0.35s ease-out;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.loading-logo-wrapper {
+  width: 82px;
+
+  height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 6px;
+
+  animation:
+    logoFloat 2s ease-in-out infinite;
+}
+
+
+.loading-logo {
+  width: 72px;
+
+  height: 72px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.loading-brand {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.35rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  color: #86634f;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   CATCH PHRASE
+   ========================================================= */
+
+.loading-message {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 0.88rem;
+
+  letter-spacing: 0.35px;
+
+  color: #708238;
+
+  margin-bottom: 14px;
+
+  animation:
+    messagePulse 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PAINT BRUSH LOADER
+   ========================================================= */
+
+.paint-loader-wrapper {
+  position: relative;
+
+  width: 250px;
+
+  height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* SVG */
+
+.paint-loader {
+  width: 250px;
+
+  height: 76px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   BASE PAINT STROKE
+   ========================================================= */
+
+.paint-stroke-base {
+  stroke:
+    rgba(112, 130, 56, 0.13);
+
+  stroke-width: 4;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ANIMATED PAINT STROKE
+   ========================================================= */
+
+.paint-stroke-progress {
+  stroke:
+    #708238;
+
+  stroke-width: 4;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  stroke-dasharray: 100;
+
+  stroke-dashoffset: 100;
+
+  animation:
+    paintStroke 2.8s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   PAINT BRUSH
+   ========================================================= */
+
+.paint-brush {
+  transform-origin: center;
+
+  filter:
+    drop-shadow(
+      0 2px 2px rgba(70, 55, 35, 0.18)
+    );
+}
+
+
+/* Brush bristles */
+
+.brush-bristles {
+  fill:
+    #708238;
+
+  stroke:
+    #5d6b2e;
+
+  stroke-width: 0.8;
+
+  stroke-linejoin: round;
+}
+
+
+/* Brush metal ferrule */
+
+.brush-ferrule {
+  fill:
+    #c8a86b;
+
+  stroke:
+    #a8884d;
+
+  stroke-width: 0.6;
+}
+
+
+/* Wooden handle */
+
+.brush-handle {
+  fill:
+    #8b624d;
+
+  stroke:
+    #704a38;
+
+  stroke-width: 0.7;
+
+  stroke-linejoin: round;
+}
+
+
+/* Handle highlight */
+
+.brush-highlight {
+  fill: none;
+
+  stroke:
+    rgba(255, 231, 196, 0.65);
+
+  stroke-width: 0.8;
+
+  stroke-linecap: round;
+}
+
+
+/* =========================================================
+   LITTLE PAINT DROPS
+   ========================================================= */
+
+.paint-dot {
+  position: absolute;
+
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    #708238;
+
+  opacity: 0;
+
+  animation:
+    paintDot 2.8s ease-in-out infinite;
+}
+
+
+.paint-dot-one {
+  left: 43px;
+
+  top: 18px;
+
+  animation-delay:
+    0.25s;
+}
+
+
+.paint-dot-two {
+  left: 112px;
+
+  top: 57px;
+
+  width: 3px;
+
+  height: 3px;
+
+  animation-delay:
+    1.05s;
+}
+
+
+.paint-dot-three {
+  right: 34px;
+
+  top: 25px;
+
+  width: 3px;
+
+  height: 3px;
+
+  animation-delay:
+    1.85s;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes navigationOverlayIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes loadingCardIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(8px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes logoFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-5px);
+  }
+}
+
+
+@keyframes messagePulse {
+
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   PAINT STROKE ANIMATION
+   ========================================================= */
+
+@keyframes paintStroke {
+
+  0% {
+    stroke-dashoffset: 100;
+
+    opacity: 0.35;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  65% {
+    stroke-dashoffset: 0;
+
+    opacity: 1;
+  }
+
+  82% {
+    stroke-dashoffset: 0;
+
+    opacity: 0.8;
+  }
+
+  100% {
+    stroke-dashoffset: 100;
+
+    opacity: 0.35;
+  }
+}
+
+
+/* =========================================================
+   PAINT DOT ANIMATION
+   ========================================================= */
+
+@keyframes paintDot {
+
+  0%,
+  20% {
+    opacity: 0;
+
+    transform:
+      scale(0.4)
+      translateY(0);
+  }
+
+  35% {
+    opacity: 0.65;
+
+    transform:
+      scale(1)
+      translateY(-2px);
+  }
+
+  55% {
+    opacity: 0.15;
+
+    transform:
+      scale(0.8)
+      translateY(2px);
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+
+    transform:
+      scale(0.4)
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .navigation-loading-card {
+    min-width: 235px;
+
+    padding:
+      22px 25px 24px;
+
+    border-radius: 20px;
+  }
+
+
+  .loading-logo-wrapper {
+    width: 70px;
+
+    height: 70px;
+  }
+
+
+  .loading-logo {
+    width: 62px;
+
+    height: 62px;
+  }
+
+
+  .loading-brand {
+    font-size: 1.2rem;
+  }
+
+
+  .loading-message {
+    font-size: 0.82rem;
+
+    margin-bottom: 10px;
+  }
+
+
+  .paint-loader-wrapper {
+    width: 220px;
+
+    height: 68px;
+  }
+
+
+  .paint-loader {
+    width: 220px;
+
+    height: 68px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navigation-loading-overlay,
+  .navigation-loading-card,
+  .loading-logo-wrapper,
+  .loading-message,
+  .paint-stroke-progress,
+  .paint-dot {
+    animation: none;
+  }
+
+  .paint-stroke-progress {
+    stroke-dashoffset: 0;
+
+    opacity: 1;
+  }
+}

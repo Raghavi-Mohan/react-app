@@ -48,7 +48,7 @@ const paintings = [
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Blueprint of Nature.png'),
+            require('../Asset/paintings/Blueprint of Nature_12x16.png'),
             safeRequire('Blueprint of Nature_1.png')
         ],
         description: `Acrylic Textures on canvas, 12x16 inches.
@@ -64,7 +64,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Echo of the Earth.png'),
+            require('../Asset/paintings/Echo of the Earth_26x18.png'),
             safeRequire('Echo of the Earth_1.png')
         ],
         description: desc
@@ -75,7 +75,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Floral Reverie.png'),
+            require('../Asset/paintings/Floral Reverie_7x14.png'),
             safeRequire('Floral Reverie_1.jpg'),
             safeRequire('Floral Reverie_2.jpg')
         ],
@@ -87,7 +87,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Framed by Flora.png'),
+            require('../Asset/paintings/Framed by Flora_12x16.png'),
             safeRequire('Framed by Flora_1.jpg'),
             safeRequire('Framed by Flora_2.jpg')
         ],
@@ -99,7 +99,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Garden of Time.png'),
+            require('../Asset/paintings/Garden of Time_20x18.png'),
             safeRequire('Garden of Time_1.png')
 
         ],
@@ -111,7 +111,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Golden Morning.png'),
+            require('../Asset/paintings/Golden Morning_26x18.png'),
             safeRequire('Golden Morning_1.png')
 
         ],
@@ -123,7 +123,8 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Gratitude in Texture.png'),            
+            require('../Asset/paintings/Gratitude in Texture_8x12.png'),
+            require('../Asset/paintings/Kindness Captured_8x12.png'),
             safeRequire('Gratitude in Texture_1.png')
         ],
         description: desc
@@ -134,7 +135,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Heirloom Elegance.png'),
+            require('../Asset/paintings/Heirloom Elegance_8".png'),
             safeRequire('Heirloom Elegance_1.png')
         ],
         description: desc
@@ -145,7 +146,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Heritage in Hue.png'),
+            require('../Asset/paintings/Heritage in Hue_12x16.png'),
             safeRequire('Heritage in Hue_1.png'),
             safeRequire('Heritage in Hue_2.png')
         ],
@@ -157,20 +158,9 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Ink & Ice Garden.png'),
+            require('../Asset/paintings/Ink & Ice Garden_10x12.png'),
             safeRequire('Ink & Ice Garden_1.png'),
             safeRequire('Ink & Ice Garden_2.png')
-        ],
-        description: desc
-    },
-    {
-        id: 11,
-        title: 'Kindness Captured',
-        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
-        options:MaterialOptions,
-        slider: [
-            safeRequire('Kindness Captured.png'),
-            safeRequire('Kindness Captured_1.png')
         ],
         description: desc
     },
@@ -180,7 +170,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Lavender Loop.png'),
+            require('../Asset/paintings/Lavender Loop_4x16.png'),
             safeRequire('Lavender Loop_1.png'),
             safeRequire('Lavender Loop_2.png')
         ],
@@ -192,7 +182,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Layered Comfort.png'),
+            require('../Asset/paintings/Layered Comfort_8x12.png'),
             safeRequire('Layered Comfort_1.png')
         ],
         description: desc
@@ -203,7 +193,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Mandala Clock.png'),
+            require('../Asset/paintings/Mandala Clock_12".png'),
             safeRequire('Mandala Clock_1.png')
         ],
         description: desc
@@ -214,7 +204,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Moments in Motion.png'),
+            require('../Asset/paintings/Moments in Motion_20x20.png'),
             safeRequire('Moments in Motion_1.png')
         ],
         description: desc
@@ -225,7 +215,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Peacock Bloom.png'),
+            require('../Asset/paintings/Peacock Bloom_36x28.png'),
             safeRequire('Peacock Bloom_1.png')
         ],
         description: desc
@@ -236,7 +226,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Regal Silence.png'),
+            require('../Asset/paintings/Regal Silence_8x10.png'),
             safeRequire('Regal Silence_1.png')
         ],
         description: desc
@@ -247,7 +237,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Rings of Calm.png'),
+            require('../Asset/paintings/Rings of Calm_26x18.png'),
             safeRequire('Rings of Calm_1.png')
         ],
         description: desc
@@ -258,7 +248,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Roots of Gold.png'),
+            require('../Asset/paintings/Roots of Gold_8x10.png'),
             safeRequire('Roots of Gold_1.png'),
             safeRequire('Roots of Gold_2.png')
         ],
@@ -270,7 +260,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Royal Reflection.png'),
+            require('../Asset/paintings/Royal Reflection_12x16.png'),
             safeRequire('Royal Reflection_1.png')
         ],
         description: desc
@@ -281,7 +271,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Structured Serenity.png'),
+            require('../Asset/paintings/Structured Serenity_36x28.png'),
             safeRequire('Structured Serenity_1.png')
         ],
         description: desc
@@ -292,7 +282,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Terracotta Bloom.jpg'),
+            require('../Asset/paintings/Terracotta Bloom_12x16.png'),
             safeRequire('Terracotta Bloom_1.png')
         ],
         description: desc
@@ -303,7 +293,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('The Playful Divine.png'),
+            require('../Asset/paintings/The Playful Divine_18".png'),
             safeRequire('The Playful Divine_1.png')
         ],
         description: desc
@@ -314,7 +304,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Tribal Grace.png'),
+            require('../Asset/paintings/Tribal Grace_20x16.png'),
             safeRequire('Tribal Grace_1.png')
         ],
         description: desc
@@ -325,7 +315,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Velvet Jewel.png'),
+            require('../Asset/paintings/Velvet Jewel_8".png'),
             safeRequire('Velvet Jewel_1.png')
         ],
         description: desc
@@ -336,7 +326,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Wave of Time.png'),
+            require('../Asset/paintings/Wave of Time_8".png'),
             safeRequire('Wave of Time_1.png')
         ],
         description: desc
@@ -347,20 +337,9 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Handcrafted & available - yours if you love it.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Window to Spring.jpg'),
+            require('../Asset/paintings/Window to Spring_26x18.png'),
             safeRequire('Window to Spring_1.jpg'),
             safeRequire('Window to Spring_2.jpg')
-        ],
-        description: desc
-    },
-    {
-        id: 28,
-        title: 'Elegance in Flight',
-        availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
-        options:MaterialOptions,
-        slider: [
-            safeRequire('Elegance in Flight.png'),
-            safeRequire('Elegance in Flight_1.png')
         ],
         description: desc
     },
@@ -370,7 +349,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Stories in Her Stance.png'),
+            require('../Asset/paintings/Stories in Her Stance_12x16.png'),
             safeRequire('Stories in Her Stance_1.png')
         ],
         description: desc
@@ -381,7 +360,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Feather of Grace.png'),
+            require('../Asset/paintings/Feather of Grace_12x16.png'),
             safeRequire('Feather of Grace_2.png')
         ],
         description: desc
@@ -392,7 +371,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Beyond Threshold.png'),
+            require('../Asset/paintings/Beyond Threshold_12x16.png'),
             safeRequire('Beyond Threshold_1.png'),
             safeRequire('Beyond Threshold_2.png'),
             safeRequire('Beyond Threshold_3.png')
@@ -405,7 +384,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Melody in Gold.png'),
+            require('../Asset/paintings/Melody in Gold_36x28.png'),
             safeRequire('Melody in Gold_1.png')
         ],
         description: desc
@@ -416,7 +395,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Whispers in Balance.png'),
+            require('../Asset/paintings/Whispers in Balance_12x16.png'),
             safeRequire('Whispers in Balance_1.png'),
             safeRequire('Whispers in Balance_2.png')
 
@@ -429,7 +408,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Grace in Silence.png'),
+            require('../Asset/paintings/Grace in Silence_20x20.png'),
             safeRequire('Grace in Silence_1.png'),
             safeRequire('Grace in Silence_2.png')
 
@@ -497,7 +476,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('Blush Harmony.jpg'),
+            require('../Asset/paintings/Blush Harmony_10".jpg'),
             safeRequire('Blush Harmony_1.jpg'),
             safeRequire('Blush Harmony_2.jpg'),
             safeRequire('Blush Harmony_3.jpg')
@@ -510,7 +489,9 @@ The interior mockup is for display purposes only and is not to scale.`
         title: 'MiniCanvas',
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
-        slider: [],
+        slider: [
+            require('../Asset/paintings/MiniCanvas_4x4.jpg'),
+        ],
         description: desc
     },
     {
@@ -519,7 +500,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
         slider: [
-            safeRequire('Annapakshi.jpg'),
+            require('../Asset/paintings/Annapakshi_11x14.jpg'),
             safeRequire('Annapakshi_1.jpg')
         ],
         description: desc
@@ -530,7 +511,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
         slider: [
-            safeRequire('TanjorePeacock.jpg'),
+            require('../Asset/paintings/TanjorePeacock_11x14.jpg'),
             safeRequire('TanjorePeacock_1.jpg')
         ],
         description: desc
@@ -541,7 +522,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
         slider: [
-            safeRequire('RoyalElephant.jpg'),
+            require('../Asset/paintings/RoyalElephant_11x14.jpg'),
             safeRequire('RoyalElephant_1.jpg')
         ],
         description: desc
@@ -552,7 +533,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            safeRequire('TexturedPeacock.jpg'),
+            require('../Asset/paintings/TexturedPeacock_12x16.png'),
             safeRequire('TexturedPeacock_1.jpg')
         ],
         description: desc
@@ -563,7 +544,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:TanjorePaintingOptions,
          slider: [
-            safeRequire('GoldenPrinces.jpg'),
+            require('../Asset/paintings/GoldenPrinces_11x14.jpg'),
             safeRequire('GoldenPrinces_1.jpg')
         ],
         description: desc
@@ -581,7 +562,19 @@ The interior mockup is for display purposes only and is not to scale.`
             require('../Asset/shellTrinketDish/STT_5.jpg')
         ],
         description: 'A shell reimagined as a trinket dish—handcrafted, decorative, and practical.'
+    },
+    {
+        id: 46,
+        title: 'ScentedTrays',
+        availablity: 'Pre-order: Handcrafted scented trays',
+        options: 'Available in multiple sizes and finishes, each tray is uniquely handcrafted.',
+        slider: [
+            require('../Asset/scentedTrays/ST_1.jpg'),
+            require('../Asset/scentedTrays/ST_2.jpg')
+        ],
+        description: 'Minimslist clay dishes handcraftef to bring a calm aura to your space. Perfect for incense sticks.'
     }
+
 ];
 
 export default paintings;

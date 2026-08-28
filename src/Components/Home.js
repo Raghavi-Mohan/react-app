@@ -86,7 +86,7 @@ export default function Home() {
               <div className="col-12 col-md-6 col-lg-4 order-3">
                 <article className="feature-card promo">
                   <div className="promo-content">
-                    <h3 className="card-title">Commissions & Framing</h3>
+                    <h3 className="card-title">Collaborations & Framing</h3>
                     <p className="card-text">Custom sizes, framing advice, and safe shipping — let's create something for your wall.</p>
                     <a href="#/links" className="btn btn-sm btn-outline-dark">Get in touch</a>
                   </div>

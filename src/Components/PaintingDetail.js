@@ -89,17 +89,17 @@ console.log("Decoded Title:", decodedTitle);
         <hr className="w-85 bg-dark mx-auto mt-4 mb-2" />
 
         <div className="mt-2">
-          <h5 className='description fw-bold fst-italic'>Availability :</h5>
+          <h5 className='detail-section-title'>Availability :</h5>
           <PaintingDescription description={painting.availablity} />
         </div>
 
         <div className="mt-2">
-          <h5 className='description fw-bold fst-italic'>Material Options :</h5>
+          <h5 className='detail-section-title'>Material Options :</h5>
           <PaintingDescription description={painting.options} />
         </div>
 
         <div className="mt-2">
-          <h5 className='description fw-bold fst-italic'>Details :</h5>
+          <h5 className='detail-section-title'>Details :</h5>
           <PaintingDescription description={painting.description} />
         </div>
       </div>

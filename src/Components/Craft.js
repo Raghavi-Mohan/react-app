@@ -1,25 +1,19 @@
 import React from 'react'
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import Header from './Header';
 import Headings from './Headings';
 import ProductsCard from './ProductsCard';
 import Footer from './Footer';
+import './product.css';
 
 
 export default function Craft() {
 
-  // Get category from URL
-  // Example:
-  // /crafts/magnets
-  // /crafts/charms
-  // /crafts/bookmarks
-  // /crafts/shells
-
   const { category } = useParams();
 
 
-  // Import all images from each craft folder
+  // Import all images
 
   const importAll = (requireContext) =>
     requireContext.keys().map(requireContext);
@@ -60,8 +54,18 @@ export default function Craft() {
     )
   );
 
+    const scentedTrays = importAll(
+    require.context(
+      '../Asset/scentedTrays',
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
 
-  // Define each craft category
+
+  // =====================================================
+  // CATEGORY CONFIGURATION
+  // =====================================================
 
   const craftCategories = {
 
@@ -88,102 +92,170 @@ export default function Craft() {
 
     shells: {
       items: shellItems,
-      heading: "A Shell Reimagined.. - Shell Trinket Dish",
+      heading: "An elegent shoreline escape for your everyday jewelry - Shell Trinket Dish",
       caption: "Shell Trinket Dish",
-      paintingId: "ShellTrinketDish"
+      paintingId: "Shell"
+    },
+
+    scentedtrays: {
+      items: scentedTrays,
+      heading: "A handmade home for your favorite scents - Incense stick holder",
+      caption: "Scented Trays",
+      paintingId: "ScentedTrays"
     }
+
 
   };
 
 
-  /*
-   * If someone goes to:
-   * /crafts
-   *
-   * send them to the Magnets page.
-   */
+  // =====================================================
+  // DISPLAY ONE CATEGORY
+  // =====================================================
+
+  const renderCategory = (categoryData) => {
+
+    return (
+      <React.Fragment>
+
+        <Headings
+          heading={categoryData.heading}
+        />
+
+        <hr className="w-75 bg-dark mx-auto" />
+
+        <div className="gallery-grid">
+          {categoryData.items.map((imgSrc, index) => (
+
+            <ProductsCard
+              key={index}
+              paintingId={categoryData.paintingId}
+            >
+
+              <div className="gallery-image-wrap">
+                <img
+                  className="gallery-image"
+                  src={imgSrc}
+                  alt={`${categoryData.caption} ${index + 1}`}
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="gallery-placard">
+                <p className="gallery-title">
+                  {`${categoryData.caption} # ${index + 1}`}
+                </p>
+              </div>
+
+            </ProductsCard>
+
+          ))}
+        </div>
+
+      </React.Fragment>
+    );
+  };
+
+
+  // =====================================================
+  // MAIN /CRAFTS PAGE
+  // DISPLAY ALL FOUR CATEGORIES
+  // =====================================================
 
   if (!category) {
-    return <Navigate to="/crafts/magnets" replace />;
+
+    return (
+      <div className="craft-page">
+
+        <Header />
+
+        <main className="craft-content">
+
+          {/* MAGNETS */}
+
+          {renderCategory(craftCategories.magnets)}
+
+
+          {/* CHARMS */}
+
+          {renderCategory(craftCategories.charms)}
+
+
+          {/* BOOKMARKS */}
+
+          {renderCategory(craftCategories.bookmarks)}
+
+
+          {/* SHELLS */}
+
+          {renderCategory(craftCategories.shells)}
+
+          {/* SCENTED TRAYS */}
+
+          {renderCategory(craftCategories.scentedtrays)}
+
+        </main>
+
+        <Footer />
+
+      </div>
+    );
   }
 
 
-  /*
-   * Find the selected category
-   */
+  // =====================================================
+  // SUBMENU PAGE
+  // DISPLAY ONLY SELECTED CATEGORY
+  // =====================================================
 
   const selectedCategory =
     craftCategories[category.toLowerCase()];
 
 
-  /*
-   * If someone enters an invalid URL such as:
-   *
-   * /crafts/abc
-   *
-   * send them to Magnets.
-   */
+  // Invalid category
 
   if (!selectedCategory) {
-    return <Navigate to="/crafts/magnets" replace />;
+
+    return (
+      <div className="craft-page">
+
+        <Header />
+
+        <main className="craft-content">
+
+          <Headings heading="Little Treasures" />
+
+          <p className="text-center mt-4">
+            This collection could not be found.
+          </p>
+
+        </main>
+
+        <Footer />
+
+      </div>
+    );
+
   }
 
+
+  // =====================================================
+  // SELECTED CATEGORY
+  // =====================================================
 
   return (
     <div className="craft-page">
 
       <Header />
 
-
       <main className="craft-content">
 
-        {/* CATEGORY HEADING */}
-
-        <Headings
-          heading={selectedCategory.heading}
-        />
-
-        <hr className="w-75 bg-dark mx-auto" />
-
-
-        {/* SELECTED CATEGORY ITEMS */}
-
-        <section className="craft-items">
-
-          {selectedCategory.items.map((imgSrc, index) => (
-
-            <ProductsCard
-              key={index}
-              paintingId={selectedCategory.paintingId}
-            >
-
-              <figure className="text-center stylish-caption">
-
-                <figcaption className="mt-2">
-                  {`${selectedCategory.caption} # ${index + 1}`}
-                </figcaption>
-
-                <img
-                  className="w-75 h-75 img-fluid"
-                  src={imgSrc}
-                  alt={`${selectedCategory.caption} ${index + 1}`}
-                />
-
-                <figcaption className="mt-2"></figcaption>
-
-              </figure>
-
-            </ProductsCard>
-
-          ))}
-
-        </section>
+        {renderCategory(selectedCategory)}
 
       </main>
-
 
       <Footer />
 
     </div>
-  )
+  );
+
 }

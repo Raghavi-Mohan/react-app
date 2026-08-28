@@ -1,0 +1,127 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 44px 32px;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 1000px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 12px;
+    padding: 0 14px;
+    margin: 24px auto;
+  }
+
+  .gallery-image {
+    transition: transform 0.25s ease-out;
+  }
+
+  .gallery-card:hover .gallery-image,
+  .gallery-card:active .gallery-image,
+  .gallery-card.is-pressed .gallery-image,
+  .gallery-card.in-view .gallery-image {
+    transform: scale(1.1);
+  }
+
+  .gallery-frame {
+    padding: 8px;
+    transition: box-shadow 0.25s ease-out, transform 0.25s ease-out;
+  }
+
+  .gallery-card.in-view .gallery-frame {
+    box-shadow: 0 16px 26px -12px rgba(61, 52, 40, 0.22);
+    transform: translateY(-4px);
+  }
+
+  .gallery-placard {
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+
+  .gallery-title {
+    font-size: 13px;
+    margin: 0 0 4px;
+  }
+
+  .gallery-size {
+    font-size: 9px;
+    padding: 2px 7px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.gallery-card {
+  cursor: pointer;
+}
+
+.gallery-frame {
+  background: #FCFAF4;
+  padding: 14px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(61, 52, 40, 0.18);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.gallery-card:hover .gallery-frame,
+.gallery-card:active .gallery-frame,
+.gallery-card.is-pressed .gallery-frame {
+  box-shadow: 0 22px 36px -14px rgba(61, 52, 40, 0.18);
+  transform: translateY(-6px);
+}
+
+.gallery-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(61, 52, 40, 0.14);
+}
+
+.gallery-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.gallery-card:hover .gallery-image,
+.gallery-card:active .gallery-image,
+.gallery-card.is-pressed .gallery-image {
+  transform: scale(1.06);
+}
+
+.gallery-placard {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(61, 52, 40, 0.14);
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  color: #3D3428;
+  margin: 0 0 6px;
+}
+
+.gallery-size {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #AD7D45;
+  border: 1px solid rgba(173, 125, 69, 0.4);
+  padding: 3px 10px;
+  border-radius: 999px;
+}

@@ -1,0 +1,263 @@
+/* =========================================================
+   MODERN ART PAGE HEADING
+   ========================================================= */
+
+.page-heading {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 38px 20px 28px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SMALL TOP DECORATION
+   ========================================================= */
+
+.page-heading-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  opacity: 0.85;
+}
+
+
+.heading-line {
+  width: 38px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #b5a28e
+    );
+}
+
+
+.heading-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      #b5a28e,
+      transparent
+    );
+}
+
+
+.heading-dot {
+  font-size: 9px;
+
+  color: #78863d;
+
+  line-height: 1;
+
+  transform: rotate(45deg);
+}
+.page-heading-title {
+  margin: 0;
+
+  max-width: 900px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  /* Smaller than the previous version */
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.3px;
+
+  /* Warm artistic brown instead of black */
+  color: #80604d;
+
+  /* Very subtle depth */
+  text-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.7);
+
+  position: relative;
+}
+
+
+
+/* =========================================================
+   OPTIONAL SUBTITLE
+   ========================================================= */
+
+.page-heading-subtitle {
+  max-width: 620px;
+
+  margin: 12px auto 0;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+
+  font-size:
+    clamp(0.9rem, 1.5vw, 1.05rem);
+
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.15px;
+
+  color: #706d67;
+}
+
+
+/* =========================================================
+   BOTTOM ACCENT
+   ========================================================= */
+
+.page-heading-accent {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+
+.page-heading-accent span:not(.accent-leaf) {
+  width: 42px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(128, 96, 77, 0.35)
+    );
+}
+
+
+.page-heading-accent span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(128, 96, 77, 0.35),
+      transparent
+    );
+}
+
+
+.accent-leaf {
+  color: #7d8d3d;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  transform:
+    rotate(-12deg);
+
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   SUBTLE ENTRANCE ANIMATION
+   ========================================================= */
+
+.page-heading {
+  animation:
+    headingReveal 0.6s ease-out both;
+}
+
+
+@keyframes headingReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .page-heading {
+    padding:
+      28px 16px 22px;
+  }
+
+
+  .page-heading-title {
+    font-size: 2rem;
+
+    letter-spacing: -0.4px;
+  }
+
+
+  .page-heading-subtitle {
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+    margin-top: 9px;
+  }
+
+
+  .page-heading-accent {
+    margin-top: 14px;
+  }
+
+
+  .page-heading-accent span:not(.accent-leaf) {
+    width: 36px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .page-heading {
+    animation: none;
+  }
+}

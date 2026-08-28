@@ -123,7 +123,7 @@ export default class Header extends Component {
                                         to="/crafts/charms"
                                         onClick={this.closeMenu}
                                     >
-                                        <span className="submenu-icon">✦</span>
+                                        <span className="submenu-icon">🔗</span>
                                         <span>Charms</span>
                                     </NavLink>
 
@@ -131,7 +131,7 @@ export default class Header extends Component {
                                         to="/crafts/bookmarks"
                                         onClick={this.closeMenu}
                                     >
-                                        <span className="submenu-icon">✧</span>
+                                        <span className="submenu-icon">🔖</span>
                                         <span>BookMarks</span>
                                     </NavLink>
 
@@ -147,8 +147,16 @@ export default class Header extends Component {
                                         to="/crafts/shells"
                                         onClick={this.closeMenu}
                                     >
-                                        <span className="submenu-icon">◌</span>
+                                        <span className="submenu-icon">🐚</span>
                                         <span>Shells</span>
+                                    </NavLink>
+
+                                     <NavLink
+                                        to="/crafts/scentedtrays"
+                                        onClick={this.closeMenu}
+                                    >
+                                        <span className="submenu-icon">♨</span>
+                                        <span>Scented Trays</span>
                                     </NavLink>
 
                                 </div>
