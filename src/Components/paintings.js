@@ -476,7 +476,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
-            require('../Asset/paintings/Blush Harmony_10".jpg'),
+            require('../Asset/paintings/Blush Harmony_10".png'),
             safeRequire('Blush Harmony_1.jpg'),
             safeRequire('Blush Harmony_2.jpg'),
             safeRequire('Blush Harmony_3.jpg')
@@ -490,6 +490,7 @@ The interior mockup is for display purposes only and is not to scale.`
         availablity: 'Recreation Avaliable : Each piece is handcrafted uniquely.',
         options:MaterialOptions,
         slider: [
+            require('../Asset/paintings/MiniCanvas_4x4.jpg'),
             require('../Asset/paintings/MiniCanvas_4x4.jpg'),
         ],
         description: desc
@@ -573,6 +574,17 @@ The interior mockup is for display purposes only and is not to scale.`
             require('../Asset/scentedTrays/ST_2.jpg')
         ],
         description: 'Minimslist clay dishes handcraftef to bring a calm aura to your space. Perfect for incense sticks.'
+    },
+        {
+        id: 46,
+        title: 'Little Tusker',
+        availablity: 'Pre-order: Handcrafted scented trays',
+        options: 'MaterialOptions',
+        slider: [
+            require('../Asset/paintings/Little Tusker_11x7.jpg'),
+            safeRequire('Little Tusker_1.jpg')
+        ],
+        description: desc
     }
 
 ];
