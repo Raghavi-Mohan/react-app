@@ -39,11 +39,20 @@
   height: 390px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform .5s ease;
 }
 
 .art-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 18px 40px rgba(18,25,40,0.12);
+}
+
+.art-card:hover img {
+  transform: scale(1.04);
+}
+
+.art-card.clickable {
+  cursor: pointer;
 }
 
 /* alternate card — slightly different crop */

@@ -1,8 +1,9 @@
 // ...existing code...
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from './Header';
 import Footer from './Footer';
+import QuickViewModal from './QuickViewModal';
 import T_ALL_1 from '../Asset/T_ALL_1.jpg'
 import ALL_2 from '../Asset/ALL_2.jpg'
 import ALL_4 from '../Asset/ALL_3.jpg'
@@ -10,10 +11,13 @@ import me from '../Asset/my.png'
 import B_ALL_1 from '../Asset/B_ALL_1.png'
 import ALL_3 from '../Asset/C_ALL_1.png'
 import '../Home.css'
+import './product.css'
 import ArtGuide from './ArtGuide';
 // ...existing code...
 
 export default function Home() {
+  const [quickViewItem, setQuickViewItem] = useState(null);
+
   useEffect(() => {
     const items = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
@@ -27,6 +31,16 @@ export default function Home() {
     items.forEach(i => obs.observe(i));
     return () => obs.disconnect();
   }, []);
+
+  const openQuickView = (src, title) => {
+    setQuickViewItem({
+      src,
+      title,
+      size: null,
+      linkTo: '/products',
+      linkLabel: 'View Full Gallery'
+    });
+  };
 
   return (
     <div className="home-page">
@@ -55,11 +69,11 @@ export default function Home() {
         </section>
 
         {/* FEATURE / COLLECTIONS */}
-        <section className="features reveal">
+        <section className="features">
           <div className="container">
             <div className="row g-4">
               <div className="col-md-6 col-lg-4">
-                <article className="feature-card">
+                <article className="feature-card reveal" style={{ transitionDelay: '0s' }}>
                   <div className="card-media">
                     <img src={ALL_2} alt="Pocket & Page Collection" loading="lazy" />
                   </div>
@@ -72,7 +86,7 @@ export default function Home() {
               </div>
 
               <div className="col-md-6 col-lg-4">
-                <article className="feature-card">
+                <article className="feature-card reveal" style={{ transitionDelay: '0.12s' }}>
                   <div className="card-media">
                     <img src={me} alt="Artist portrait" loading="lazy" />
                   </div>
@@ -84,7 +98,7 @@ export default function Home() {
                 </article>
               </div>
               <div className="col-12 col-md-6 col-lg-4 order-3">
-                <article className="feature-card promo">
+                <article className="feature-card promo reveal" style={{ transitionDelay: '0.24s' }}>
                   <div className="promo-content">
                     <h3 className="card-title">Collaborations & Framing</h3>
                     <p className="card-text">Custom sizes, framing advice, and safe shipping — let's create something for your wall.</p>
@@ -102,17 +116,29 @@ export default function Home() {
             <h4 className="section-heading text-center mb-4">A few recent works</h4>
             <div className="row g-3 justify-content-center">
               <div className="col-6 col-sm-4 col-md-3">
-                <div className="thumb">
+                <div
+                  className="thumb reveal"
+                  style={{ transitionDelay: '0s' }}
+                  onClick={() => openQuickView(B_ALL_1, 'Recent Work')}
+                >
                   <img src={B_ALL_1} alt="" loading="lazy" />
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className="thumb">
+                <div
+                  className="thumb reveal"
+                  style={{ transitionDelay: '0.1s' }}
+                  onClick={() => openQuickView(ALL_4, 'Recent Work')}
+                >
                   <img src={ALL_4} alt="" loading="lazy" />
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md-3">
-                <div className="thumb">
+                <div
+                  className="thumb reveal"
+                  style={{ transitionDelay: '0.2s' }}
+                  onClick={() => openQuickView(ALL_3, 'Recent Work')}
+                >
                   <img src={ALL_3} alt="" loading="lazy" />
                 </div>
               </div>
@@ -127,6 +153,8 @@ export default function Home() {
         </section>*/}
 
       </main>
+
+      <QuickViewModal item={quickViewItem} onClose={() => setQuickViewItem(null)} />
 
       <Footer />
     </div>

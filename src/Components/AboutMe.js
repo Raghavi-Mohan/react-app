@@ -1,13 +1,17 @@
 // ...existing code...
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header';
 import Footer from './Footer';
+import QuickViewModal from './QuickViewModal';
 import ab from '../Asset/AB_1.png'
 import abme from '../Asset/my_2.png'
 import '../AboutMe.css'
+import './product.css'
 // ...existing code...
 
 export default function AboutMe() {
+  const [quickViewItem, setQuickViewItem] = useState(null);
+
   useEffect(() => {
     const items = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
@@ -22,6 +26,16 @@ export default function AboutMe() {
     return () => obs.disconnect();
   }, []);
 
+  const openQuickView = () => {
+    setQuickViewItem({
+      src: ab,
+      title: 'Abstract Textured Painting',
+      size: null,
+      linkTo: '/products',
+      linkLabel: 'View Full Gallery'
+    });
+  };
+
   return (
     <div className="about-page">
       <Header />
@@ -35,7 +49,7 @@ export default function AboutMe() {
               </p>
             </div>
             <div className="col-md-6 d-flex justify-content-center">
-              <div className="art-card">
+              <div className="art-card clickable" onClick={openQuickView}>
                 <img src={ab} alt="Abstract textured painting" loading="lazy" />
               </div>
             </div>
@@ -55,14 +69,17 @@ export default function AboutMe() {
                 My work merges traditional Indian motifs with contemporary texture work — thoughtful layers, color harmonies, and tactile surfaces that invite closer viewing.
               </p>
               <ul className="list-unstyled text-muted">
-                <li>• Textured mixed-media pieces</li>
-                <li>• Commissions & framed walls</li>
-                <li>• Shipping & display guidance</li>
+                <li className="reveal" style={{ transitionDelay: '0s' }}>• Textured mixed-media pieces</li>
+                <li className="reveal" style={{ transitionDelay: '0.1s' }}>• Commissions & framed walls</li>
+                <li className="reveal" style={{ transitionDelay: '0.2s' }}>• Shipping & display guidance</li>
               </ul>
             </div>
           </div>
         </section>
       </main>
+
+      <QuickViewModal item={quickViewItem} onClose={() => setQuickViewItem(null)} />
+
       <Footer />
     </div>
   )

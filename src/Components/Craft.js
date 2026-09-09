@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 import Header from './Header';
 import Headings from './Headings';
 import ProductsCard from './ProductsCard';
+import QuickViewModal from './QuickViewModal';
 import Footer from './Footer';
 import './product.css';
 
@@ -11,6 +12,7 @@ import './product.css';
 export default function Craft() {
 
   const { category } = useParams();
+  const [quickViewItem, setQuickViewItem] = useState(null);
 
 
   // Import all images
@@ -54,14 +56,13 @@ export default function Craft() {
     )
   );
 
-    const scentedTrays = importAll(
+  const scentedTrayItems = importAll(
     require.context(
       '../Asset/scentedTrays',
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
-
 
   // =====================================================
   // CATEGORY CONFIGURATION
@@ -92,18 +93,17 @@ export default function Craft() {
 
     shells: {
       items: shellItems,
-      heading: "An elegent shoreline escape for your everyday jewelry - Shell Trinket Dish",
+      heading: "A Shell Reimagined.. - Shell Trinket Dish",
       caption: "Shell Trinket Dish",
-      paintingId: "Shell"
+      paintingId: "ShellTrinketDish"
     },
 
     scentedtrays: {
-      items: scentedTrays,
-      heading: "A handmade home for your favorite scents - Incense stick holder",
-      caption: "Scented Trays",
+      items: scentedTrayItems,
+      heading: "Scented Trays for Quiet Moments",
+      caption: "Scented Tray",
       paintingId: "ScentedTrays"
     }
-
 
   };
 
@@ -118,37 +118,44 @@ export default function Craft() {
       <React.Fragment>
 
         <Headings
+          eyebrow={categoryData.caption}
           heading={categoryData.heading}
         />
 
-        <hr className="w-75 bg-dark mx-auto" />
-
         <div className="gallery-grid">
-          {categoryData.items.map((imgSrc, index) => (
+          {categoryData.items.map((imgSrc, index) => {
+            const title = `${categoryData.caption} # ${index + 1}`;
 
-            <ProductsCard
-              key={index}
-              paintingId={categoryData.paintingId}
-            >
+            return (
+              <ProductsCard
+                key={index}
+                paintingId={categoryData.paintingId}
+                onQuickView={() => setQuickViewItem({
+                  src: imgSrc,
+                  title,
+                  size: null,
+                  paintingId: categoryData.paintingId
+                })}
+              >
 
-              <div className="gallery-image-wrap">
-                <img
-                  className="gallery-image"
-                  src={imgSrc}
-                  alt={`${categoryData.caption} ${index + 1}`}
-                  loading="lazy"
-                />
-              </div>
+                <div className="gallery-image-wrap">
+                  <img
+                    className="gallery-image"
+                    src={imgSrc}
+                    alt={title}
+                    loading="lazy"
+                  />
+                </div>
 
-              <div className="gallery-placard">
-                <p className="gallery-title">
-                  {`${categoryData.caption} # ${index + 1}`}
-                </p>
-              </div>
+                <div className="gallery-placard">
+                  <p className="gallery-title">
+                    {title}
+                  </p>
+                </div>
 
-            </ProductsCard>
-
-          ))}
+              </ProductsCard>
+            );
+          })}
         </div>
 
       </React.Fragment>
@@ -196,6 +203,8 @@ export default function Craft() {
         </main>
 
         <Footer />
+
+        <QuickViewModal item={quickViewItem} onClose={() => setQuickViewItem(null)} />
 
       </div>
     );
@@ -254,6 +263,8 @@ export default function Craft() {
       </main>
 
       <Footer />
+
+      <QuickViewModal item={quickViewItem} onClose={() => setQuickViewItem(null)} />
 
     </div>
   );

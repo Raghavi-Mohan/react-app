@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Header from './Header';
 import Headings from './Headings';
 import ProductsCard from './ProductsCard';
+import QuickViewModal from './QuickViewModal';
+import SortDropdown from './SortDropdown';
 import Footer from './Footer';
 import { storage } from '../firebase';
 import { ref, listAll, getDownloadURL } from 'firebase/storage';
@@ -9,6 +11,9 @@ import './product.css';
 
 export default function Products() {
   const [firebaseImages, setFirebaseImages] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortOption, setSortOption] = useState('name-asc');
+  const [quickViewItem, setQuickViewItem] = useState(null);
 
   const importAll = (requireContext) =>
     requireContext.keys().map((key) => {
@@ -56,28 +61,122 @@ export default function Products() {
     fetchImages();
   }, []);
 
-  const renderCard = (img, key) => (
-    <ProductsCard key={key} paintingId={img.prefix}>
-      <div className="gallery-image-wrap">
-        <img className="gallery-image" src={img.src} alt={img.prefix} loading="lazy" />
-      </div>
-      <div className="gallery-placard">
-        <p className="gallery-title">'{img.prefix}'</p>
-        {img.suffix && <span className="gallery-size">{img.suffix}</span>}
-      </div>
-    </ProductsCard>
-  );
+  // Merge both sources into one list so search/sort applies uniformly,
+  // regardless of whether a piece came from Firebase or the local Asset folder.
+  const allImages = useMemo(() => {
+    const fb = firebaseImages.map((img, i) => ({ ...img, key: `fb-${i}` }));
+    const local = textures.map((img, i) => ({ ...img, key: `local-${i}` }));
+    return [...fb, ...local];
+  }, [firebaseImages, textures]);
+
+  const visibleImages = useMemo(() => {
+    let list = allImages;
+
+    if (searchTerm.trim()) {
+      const term = searchTerm.trim().toLowerCase();
+      list = list.filter((img) => img.prefix.toLowerCase().includes(term));
+    }
+
+    const sorted = [...list];
+    switch (sortOption) {
+      case 'name-asc':
+        sorted.sort((a, b) => a.prefix.localeCompare(b.prefix));
+        break;
+      case 'name-desc':
+        sorted.sort((a, b) => b.prefix.localeCompare(a.prefix));
+        break;
+      case 'size-asc':
+        sorted.sort((a, b) => (a.suffix || '').localeCompare(b.suffix || ''));
+        break;
+      default:
+        break;
+    }
+    return sorted;
+  }, [allImages, searchTerm, sortOption]);
+
+  const openQuickView = (img) => {
+    setQuickViewItem({
+      src: img.src,
+      title: img.prefix,
+      size: img.suffix,
+      paintingId: img.prefix
+    });
+  };
 
   return (
     <div>
       <Header />
-      <Headings heading="Original works created to be seen, felt, and remembered." />
-      <hr className="w-75 bg-dark mx-auto" />
+
+      <Headings
+        eyebrow="Paintings"
+        heading="Original works created to be seen, felt, and remembered."
+      />
+
+      <div className="gallery-toolbar">
+        <div className="gallery-search-wrap">
+          <svg className="gallery-search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="7" cy="7" r="5.25" stroke="currentColor" strokeWidth="1.4" />
+            <path d="M11 11L14.5 14.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+          </svg>
+
+          <input
+            type="text"
+            className="gallery-search"
+            placeholder="Search by name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+
+          {searchTerm && (
+            <button
+              type="button"
+              className="gallery-search-clear"
+              onClick={() => setSearchTerm('')}
+              aria-label="Clear search"
+            >
+              &times;
+            </button>
+          )}
+        </div>
+
+        <SortDropdown
+          options={[
+            { value: 'name-asc', label: 'Name (A-Z)' },
+            { value: 'name-desc', label: 'Name (Z-A)' },
+            { value: 'size-asc', label: 'Size' }
+          ]}
+          value={sortOption}
+          onChange={setSortOption}
+        />
+
+        <span className="gallery-count">
+          {visibleImages.length} {visibleImages.length === 1 ? 'piece' : 'pieces'}
+        </span>
+      </div>
 
       <div className="gallery-grid">
-        {firebaseImages.map((img, index) => renderCard(img, `fb-${index}`))}
-        {textures.map((img, index) => renderCard(img, `local-${index}`))}
+        {visibleImages.map((img) => (
+          <ProductsCard
+            key={img.key}
+            paintingId={img.prefix}
+            onQuickView={() => openQuickView(img)}
+          >
+            <div className="gallery-image-wrap">
+              <img className="gallery-image" src={img.src} alt={img.prefix} loading="lazy" />
+            </div>
+            <div className="gallery-placard">
+              <p className="gallery-title">'{img.prefix}'</p>
+              {img.suffix && <span className="gallery-size">{img.suffix}</span>}
+            </div>
+          </ProductsCard>
+        ))}
       </div>
+
+      {visibleImages.length === 0 && (
+        <p className="gallery-empty">No pieces match your search.</p>
+      )}
+
+      <QuickViewModal item={quickViewItem} onClose={() => setQuickViewItem(null)} />
 
       <Footer />
     </div>
